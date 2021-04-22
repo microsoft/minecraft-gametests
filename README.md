@@ -1,22 +1,45 @@
 # Project
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This repo contains sample GameTest behavior files for Minecraft Bedrock Edition.  Minecraft supports GameTests - a combination of JavaScript + MCStructures - for validating facets of Minecraft behavior.  You can use GameTests to validate facets of your creations, as well! 
 
-As the maintainer of this project, please make a few updates:
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+
+## Getting started with GameTest
+
+To get started with GameTest Framework in Minecraft, see [this docs.microsoft.com page](https://aka.ms/gametest).  
+
+A tutorial for creating your first GameTest is available [here](https://aka.ms/newgametest). The sample code for the tutorial is within this repo, at [/behavior_packs/StarterTestsTutorial](https://github.com/microsoft/minecraft-gametests/behavior_packs/StarterTestsTutorial).
+
+## Behavior packs & tests
+
+
+| Name                  | Link                                                                                         | Description |
+|-----------------------|----------------------------------------------------------------------------------------------|-------------|
+| StarterTestsTutorial  | [Open](https://github.com/microsoft/minecraft-gametests/behavior_packs/StarterTestsTutorial) | Starter "Hello World" sample used in the tutorial at https://aka.ms/newgametest. | 
+
+## Using these behavior packs
+
+To use these behavior packs with an installed Windows 10 version of Minecraft Bedrock Edition:
+
+1. Copy the desired behavior packs into the `development_behavior_packs` (`%localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\development_behavior_packs`) folder
+2. Create a new world in Minecraft with the following options:
+
+* Enable the GameTest Framework Experiment
+* Set to Creative mode
+* Add the desired Behavior packs
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+This project welcomes contributions and suggestions. For the GameTests you'd like to submit for inclusion in this sample repo, please make sure:
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
+  * the GameTest(s) are small and self contained
+  * can run in a short amount of time, with clear pass/fail criteria
+  * are generally passing, or used to document an unexpected failure and are tagged as such (with the .tag function on .register)
+  * do not have any external dependencies (e.g., on extra behavior or resource packs)
+  
+Most contributions require you to agree to a
+Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
+the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com. When you submit a pull request, a CLA bot will automatically determine whether you need to provide
 a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
 provided by the bot. You will only need to do this once across all repos using our CLA.
 
