@@ -8,14 +8,14 @@ This repo contains sample GameTest behavior files for Minecraft Bedrock Edition.
 
 To get started with GameTest Framework in Minecraft, see [this docs.microsoft.com page](https://aka.ms/gametest).  
 
-A tutorial for creating your first GameTest is available [here](https://aka.ms/newgametest). The sample code for the tutorial is within this repo, at [/behavior_packs/StarterTestsTutorial](https://github.com/microsoft/minecraft-gametests/behavior_packs/StarterTestsTutorial).
+A tutorial for creating your first GameTest is available [here](https://aka.ms/newgametest). The sample code for the tutorial is within this repo, at [/behavior_packs/StarterTestsTutorial](https://github.com/microsoft/minecraft-gametests/tree/main/behavior_packs/StarterTestsTutorial).
 
 ## Behavior packs & tests
 
 
 | Name                  | Link                                                                                         | Description |
 |-----------------------|----------------------------------------------------------------------------------------------|-------------|
-| StarterTestsTutorial  | [Open](https://github.com/microsoft/minecraft-gametests/behavior_packs/StarterTestsTutorial) | Starter "Hello World" sample used in the tutorial at https://aka.ms/newgametest. | 
+| StarterTestsTutorial  | [Open](https://github.com/microsoft/minecraft-gametests/tree/main/behavior_packs/StarterTestsTutorial) | Starter "Hello World" sample used in the tutorial at https://aka.ms/newgametest. | 
 
 ## Using these behavior packs
 
