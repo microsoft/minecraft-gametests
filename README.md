@@ -6,7 +6,7 @@ This repo contains sample GameTest behavior files for Minecraft Bedrock Edition.
 
 ## Getting started with GameTest
 
-To get started with GameTest Framework in Minecraft, see [this docs.microsoft.com page](https://aka.ms/gametest).  
+To get started with GameTest Framework in Minecraft, see this [GameTest Framework Introduction](https://aka.ms/gametest) page.  
 
 A tutorial for creating your first GameTest is available [here](https://aka.ms/newgametest). The sample code for the tutorial is within this repo, at [/behavior_packs/StarterTestsTutorial](https://github.com/microsoft/minecraft-gametests/tree/main/behavior_packs/StarterTestsTutorial).
 
