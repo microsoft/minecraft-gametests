@@ -3,15 +3,15 @@
     "header": {
         "description": "Introductory tests for Minecraft GameTest Framework.",
         "name": "Starter Hello World Tests",
-        "uuid": "1A2F42BD-98D4-4E0D-8E3F-934AB8A0C05E",
+        "uuid": "afeeb2ab-0404-4518-822f-9837117e78e1",
         "version": [0, 0, 1],
-        "min_engine_version": [ 1, 14, 0 ]
+        "min_engine_version": [ 1, 16, 210 ]
     },
     "modules": [
         {
             "description": "Script that implements basic starter tests.",
             "type": "javascript",
-            "uuid": "1A1B53FC-5653-4A75-91B7-9CDF027674AE",
+            "uuid": "ead57a90-41fc-4f3b-8e1a-ccc64c99da0c",
             "version": [0, 0, 1],
             "entry": "scripts/StarterTests.js"
         }
