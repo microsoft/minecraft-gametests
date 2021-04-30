@@ -1,19 +1,19 @@
 {
   "format_version": 2,
   "header": {
-    "description": "Introductory tests for Minecraft GameTest Framework.",
-    "name": "Starter Hello World Tests",
-    "uuid": "afeeb2ab-0404-4518-822f-9837117e78e1",
+    "description": "Tests that help validate mob functionality.",
+    "name": "MobBehavior Tests",
+    "uuid": "512a42bd-98a4-4e0d-8e3f-934ab8a0c05e",
     "version": [0, 0, 1],
     "min_engine_version": [ 1, 16, 210 ]
   },
   "modules": [
     {
-      "description": "Script that implements basic starter tests.",
+      "description": "Test logic and provisioning",
       "type": "javascript",
-      "uuid": "ead57a90-41fc-4f3b-8e1a-ccc64c99da0c",
+      "uuid": "fb1b53fc-5653-4a75-91b7-9cdf027674ae",
       "version": [0, 0, 1],
-      "entry": "scripts/StarterTests.js"
+      "entry": "scripts/MobBehaviorTests.js"
     }
   ],
   "dependencies": [
