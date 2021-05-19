@@ -1,0 +1,29 @@
+{
+    "format_version": 2,
+    "header": {
+    "description": "Tests that represent challenging conditions.",
+        "name": "Challenge Tests",
+        "uuid": "142a42aa-98d4-420d-8e3f-e34ab8a0c05e",
+        "version": [0, 0, 1],
+        "min_engine_version": [ 1, 16, 210 ]
+    },
+    "modules": [
+        {
+            "description": "Test logic and provisioning",
+            "type": "javascript",            
+            "uuid": "ab1b53fc-1253-4a75-91b7-4cdf027674ae",
+            "version": [0, 0, 1],
+            "entry": "scripts/ChallengeTests.js"
+        }
+    ],
+    "dependencies": [
+      {
+        "uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
+        "version": [ 0, 1, 0 ]
+      },
+      {
+        "uuid": "6f4b6893-1bb6-42fd-b458-7fa3d0c89616",
+        "version": [ 0, 1, 0 ]
+      }
+    ]
+}
