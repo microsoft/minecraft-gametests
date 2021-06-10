@@ -1,5 +1,5 @@
 import * as GameTest from "GameTest";
-import { Blocks, BlockLocation } from "Minecraft";
+import { BlockTypes, BlockLocation } from "Minecraft";
 import { Utilities } from "scripts/Utilities.js";
 
 // Tests the behavior of zombies chasing villagers around some walls.
@@ -7,7 +7,7 @@ function zombieVillagerChase(test) {
   const villagerType = "villager_v2";
   const zombieType = "zombie";
 
-  Utilities.addFourNotchedWalls(test, Blocks.brickBlock(), 2, 1, 2, 4, 6, 4);
+  Utilities.addFourNotchedWalls(test, BlockTypes.brickBlock, 2, 1, 2, 4, 6, 4);
 
   test.spawn(villagerType, new BlockLocation(1, 3, 1));
   test.spawn(zombieType, new BlockLocation(5, 3, 5));
