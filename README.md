@@ -10,7 +10,7 @@ A tutorial for creating your first GameTest is available [here](https://aka.ms/n
 
 ## Behavior packs & tests
 
-#### NOTE: These samples currently use additional beta APIs available in versions of Minecraft 1.17 and 1.16.230+.
+#### NOTE: The main branch is compatible with the latest released main version of Minecraft. The beta branch is generally compatible with the latest updated beta version of Minecraft.
 
 | Name                 | Link                                                                                                   | Description                                                                      |
 | -------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
