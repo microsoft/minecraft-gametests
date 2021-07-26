@@ -1,5 +1,5 @@
-import * as GameTest from "GameTest";
-import { BlockLocation } from "Minecraft";
+import * as GameTest from "mojang-gametest";
+import { BlockLocation } from "mojang-minecraft";
 
 GameTest.register("StarterTests", "simpleMobTest", (test) => {
   const attackerId = "fox";
@@ -8,11 +8,11 @@ GameTest.register("StarterTests", "simpleMobTest", (test) => {
   test.spawn(attackerId, new BlockLocation(5, 2, 5));
   test.spawn(victimId, new BlockLocation(2, 2, 2));
 
-  test.assertEntityPresentInArea(victimId);
+  test.assertEntityPresentInArea(victimId, true);
 
   // Succeed when the victim dies
   test.succeedWhen(() => {
-    test.assertEntityNotPresentInArea(victimId);
+    test.assertEntityPresentInArea(victimId, false);
   });
 })
   .maxTicks(400)

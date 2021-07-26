@@ -1,15 +1,15 @@
-import * as GameTest from "GameTest";
-import { BlockLocation, BlockTypes } from "Minecraft";
+import * as GameTest from "mojang-gametest";
+import { BlockLocation, MinecraftBlockTypes } from "mojang-minecraft";
 
 function runAsLlama(test) {
   const llamaEntityType = "llama";
 
   // spawn a llama in one cell
-  test.spawn(llamaEntityType, new BlockLocation(4, 2, 2));
+  test.spawn(llamaEntityType, new BlockLocation(4, 2, 1));
 
   // press a button which triggers a command block that "runs as llama" and moves them into a different block
   test.pressButton(new BlockLocation(2, 2, 2));
-  test.succeedWhenEntityPresent(llamaEntityType, new BlockLocation(4, 2, 5)); // has the llama moved cells?
+  test.succeedWhenEntityPresent(llamaEntityType, new BlockLocation(4, 2, 3), true); // has the llama moved cells?
 }
 GameTest.register("CommandTests", "runAsLlama", runAsLlama).structureName("gametests:LlamaCommands");
 
@@ -24,19 +24,19 @@ function cloneBlocksCommand(test) {
   test.pressButton(new BlockLocation(1, 2, 6));
 
   test.runAtTickTime(10, () => {
-    test.assertBlockTypePresent(BlockTypes.purpleGlazedTerracotta, new BlockLocation(5, 2, 1));
-    test.assertBlockTypePresent(BlockTypes.pinkGlazedTerracotta, new BlockLocation(6, 2, 2));
-    test.assertBlockTypePresent(BlockTypes.log, new BlockLocation(5, 2, 2));
+    test.assertBlockPresent(MinecraftBlockTypes.purpleGlazedTerracotta, new BlockLocation(5, 2, 1), true);
+    test.assertBlockPresent(MinecraftBlockTypes.pinkGlazedTerracotta, new BlockLocation(6, 2, 2), true);
+    test.assertBlockPresent(MinecraftBlockTypes.log, new BlockLocation(5, 2, 2), true);
 
     // test that the chest was cloned.
-    test.assertBlockTypePresent(BlockTypes.chest, new BlockLocation(5, 2, 4));
-    test.assertBlockTypePresent(BlockTypes.chest, new BlockLocation(6, 2, 4));
+    test.assertBlockPresent(MinecraftBlockTypes.chest, new BlockLocation(5, 2, 4), true);
+    test.assertBlockPresent(MinecraftBlockTypes.chest, new BlockLocation(6, 2, 4), true);
 
     // test that the andesite stairs was cloned.
-    test.assertBlockTypePresent(BlockTypes.andesiteStairs, new BlockLocation(5, 2, 8));
-    test.assertBlockTypePresent(BlockTypes.andesiteStairs, new BlockLocation(6, 2, 8));
-    test.assertBlockTypePresent(BlockTypes.andesiteStairs, new BlockLocation(5, 2, 9));
-    test.assertBlockTypePresent(BlockTypes.andesiteStairs, new BlockLocation(6, 2, 9));
+    test.assertBlockPresent(MinecraftBlockTypes.andesiteStairs, new BlockLocation(5, 2, 8), true);
+    test.assertBlockPresent(MinecraftBlockTypes.andesiteStairs, new BlockLocation(6, 2, 8), true);
+    test.assertBlockPresent(MinecraftBlockTypes.andesiteStairs, new BlockLocation(5, 2, 9), true);
+    test.assertBlockPresent(MinecraftBlockTypes.andesiteStairs, new BlockLocation(6, 2, 9), true);
   });
 
   test.runAtTickTime(20, () => {
@@ -51,19 +51,19 @@ function cloneBlocksCommand(test) {
   });
 
   test.runAtTickTime(30, () => {
-    test.assertBlockTypePresent(BlockTypes.purpleGlazedTerracotta, new BlockLocation(8, 2, 1));
-    test.assertBlockTypePresent(BlockTypes.pinkGlazedTerracotta, new BlockLocation(9, 2, 2));
-    test.assertBlockTypePresent(BlockTypes.cobblestone, new BlockLocation(9, 2, 1));
-    test.assertBlockTypePresent(BlockTypes.chest, new BlockLocation(5, 2, 4));
-    test.assertBlockTypePresent(BlockTypes.purpleGlazedTerracotta, new BlockLocation(6, 2, 4));
-    test.assertBlockTypePresent(BlockTypes.log, new BlockLocation(6, 2, 5));
-    test.assertBlockTypePresent(BlockTypes.pinkGlazedTerracotta, new BlockLocation(7, 2, 5));
+    test.assertBlockPresent(MinecraftBlockTypes.purpleGlazedTerracotta, new BlockLocation(8, 2, 1), true);
+    test.assertBlockPresent(MinecraftBlockTypes.pinkGlazedTerracotta, new BlockLocation(9, 2, 2), true);
+    test.assertBlockPresent(MinecraftBlockTypes.cobblestone, new BlockLocation(9, 2, 1), true);
+    test.assertBlockPresent(MinecraftBlockTypes.chest, new BlockLocation(5, 2, 4), true);
+    test.assertBlockPresent(MinecraftBlockTypes.purpleGlazedTerracotta, new BlockLocation(6, 2, 4), true);
+    test.assertBlockPresent(MinecraftBlockTypes.log, new BlockLocation(6, 2, 5), true);
+    test.assertBlockPresent(MinecraftBlockTypes.pinkGlazedTerracotta, new BlockLocation(7, 2, 5), true);
 
     // test that only one of the andesite stairs was cloned.
-    test.assertBlockTypePresent(BlockTypes.air, new BlockLocation(8, 2, 8));
-    test.assertBlockTypePresent(BlockTypes.air, new BlockLocation(9, 2, 8));
-    test.assertBlockTypePresent(BlockTypes.air, new BlockLocation(8, 2, 9));
-    test.assertBlockTypePresent(BlockTypes.andesiteStairs, new BlockLocation(9, 2, 9));
+    test.assertBlockPresent(MinecraftBlockTypes.air, new BlockLocation(8, 2, 8), true);
+    test.assertBlockPresent(MinecraftBlockTypes.air, new BlockLocation(9, 2, 8), true);
+    test.assertBlockPresent(MinecraftBlockTypes.air, new BlockLocation(8, 2, 9), true);
+    test.assertBlockPresent(MinecraftBlockTypes.andesiteStairs, new BlockLocation(9, 2, 9), true);
   });
   test.runAtTickTime(40, () => {
     test.succeed();
