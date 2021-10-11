@@ -1,4 +1,4 @@
-import { BlockLocation } from "Minecraft";
+import { BlockLocation } from "mojang-minecraft";
 
 // ======= UTILITIES =================================================================================================
 
@@ -52,7 +52,7 @@ export class Utilities {
       for (let j = yFrom; j <= yTo; j++) {
         for (let k = zFrom; k <= zTo; k++) {
           try {
-            test.assertEntityNotPresent(entityType, new BlockLocation(i, j, k));
+            test.assertEntityPresent(entityType, new BlockLocation(i, j, k), false);
           } catch (Exception) {
             count++;
           }
@@ -72,7 +72,7 @@ export class Utilities {
       for (let j = yFrom; j <= yTo; j++) {
         for (let k = zFrom; k <= zTo; k++) {
           try {
-            test.assertEntityNotPresent(entityType, new BlockLocation(i, j, k));
+            test.assertEntityPresent(entityType, new BlockLocation(i, j, k), false);
           } catch (Exception) {
             count++;
           }

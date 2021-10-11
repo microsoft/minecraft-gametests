@@ -1,5 +1,5 @@
-import * as GameTest from "GameTest";
-import { BlockTypes, BlockLocation } from "Minecraft";
+import * as GameTest from "mojang-gametest";
+import { MinecraftBlockTypes, BlockLocation } from "mojang-minecraft";
 import { Utilities } from "scripts/Utilities.js";
 
 // Tests the behavior of zombies chasing villagers around some walls.
@@ -7,13 +7,13 @@ function zombieVillagerChase(test) {
   const villagerType = "villager_v2";
   const zombieType = "zombie";
 
-  Utilities.addFourNotchedWalls(test, BlockTypes.brickBlock, 2, 1, 2, 4, 6, 4);
+  Utilities.addFourNotchedWalls(test, MinecraftBlockTypes.brickBlock, 2, 1, 2, 4, 6, 4);
 
   test.spawn(villagerType, new BlockLocation(1, 3, 1));
   test.spawn(zombieType, new BlockLocation(5, 3, 5));
 
   test.runAtTickTime(180, () => {
-    test.assertEntityPresentInArea(villagerType);
+    test.assertEntityPresentInArea(villagerType, true);
     test.succeed();
   });
 }
@@ -39,9 +39,9 @@ function ironGolemArena(test) {
   test.spawn(zombieType, new BlockLocation(5, 3, 2));
 
   test.succeedWhen(() => {
-    test.assertEntityNotPresentInArea(zombieType);
-    test.assertEntityNotPresentInArea(skeletonType);
-    test.assertEntityPresentInArea(ironGolemType);
+    test.assertEntityPresentInArea(zombieType, false);
+    test.assertEntityPresentInArea(skeletonType, false);
+    test.assertEntityPresentInArea(ironGolemType, true);
   });
 }
 
@@ -78,7 +78,7 @@ function phantomsShouldFlyFromCats(test) {
   test.spawn(catEntityType, new BlockLocation(4, 3, 3));
   test.spawn(phantomEntityType, new BlockLocation(4, 3, 3));
 
-  test.succeedWhenEntityPresent(phantomEntityType, new BlockLocation(4, 6, 3)); // has the phantom flown up in their column?
+  test.succeedWhenEntityPresent(phantomEntityType, new BlockLocation(4, 6, 3), true); // has the phantom flown up in their column?
 }
 
 GameTest.register("MobBehaviorTests", "phantoms_should_fly_from_cats", phantomsShouldFlyFromCats)
