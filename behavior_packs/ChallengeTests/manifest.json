@@ -10,7 +10,8 @@
     "modules": [
         {
             "description": "Test logic and provisioning",
-            "type": "javascript",            
+            "type": "script",
+            "language": "javascript",      
             "uuid": "ab1b53fc-1253-4a75-91b7-4cdf027674ae",
             "version": [0, 0, 1],
             "entry": "scripts/ChallengeTests.js"

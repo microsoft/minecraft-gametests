@@ -1,5 +1,5 @@
 import * as GameTest from "mojang-gametest";
-import { MinecraftBlockTypes, BlockLocation, World } from "mojang-minecraft";
+import { MinecraftBlockTypes, BlockLocation } from "mojang-minecraft";
 import { Utilities } from "scripts/Utilities.js";
 
 function minibiomes(test) {

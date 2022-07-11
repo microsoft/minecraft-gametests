@@ -10,7 +10,8 @@
   "modules": [
     {
       "description": "Test logic and provisioning",
-      "type": "javascript",
+      "type": "script",
+      "language": "javascript",
       "uuid": "f31b52fc-5653-4a75-91b7-4cdf027674ae",
       "version": [0, 0, 1],
       "entry": "scripts/CommandTests.js"

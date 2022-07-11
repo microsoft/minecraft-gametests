@@ -10,7 +10,8 @@
   "modules": [
     {
       "description": "Script that implements basic starter tests.",
-      "type": "javascript",
+      "type": "script",
+      "language": "javascript",
       "uuid": "ead57a90-41fc-4f3b-8e1a-ccc64c99da0c",
       "version": [0, 0, 1],
       "entry": "scripts/StarterTests.js"
