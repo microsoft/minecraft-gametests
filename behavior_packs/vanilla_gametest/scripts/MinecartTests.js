@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import * as GameTest from "mojang-gametest";
 import { BlockLocation, MinecraftBlockTypes, Direction } from "mojang-minecraft";
 import GameTestExtensions from "./GameTestExtensions.js";
@@ -48,7 +50,7 @@ GameTest.register("MinecartTests", "detector_rail_slope", (test) => {
       break;
   }
   test.assertBlockPresent(MinecraftBlockTypes.detectorRail, poweredDetectorPos, true);
-    
+
   testEx.assertBlockProperty("rail_direction", ascendingValue, poweredDetectorPos);
 
   test.pressButton(new BlockLocation(0, 3, 3));
@@ -61,8 +63,8 @@ GameTest.register("MinecartTests", "detector_rail_slope", (test) => {
 })
   .rotateTest(true)
   .tag(GameTest.Tags.suiteDefault);
-  
- GameTest.register("MinecartTests", "detector_rail_piston", (test) => {
+
+GameTest.register("MinecartTests", "detector_rail_piston", (test) => {
   const pistonRight = new BlockLocation(5, 3, 0);
   const pistonLeft = new BlockLocation(0, 3, 0);
   const torchRight = new BlockLocation(3, 2, 0);
@@ -100,7 +102,7 @@ GameTest.register("MinecartTests", "detector_rail_slope", (test) => {
 })
   .required(false)
   .tag("suite:java_parity") //Redstone timing inconsistencies between java and bedrock.
-  .tag(GameTest.Tags.suiteDisabled); 
+  .tag(GameTest.Tags.suiteDisabled);
 
 GameTest.register("MinecartTests", "detector_rail_piston_bedrock", (test) => {
   const pistonRight = new BlockLocation(5, 3, 0);

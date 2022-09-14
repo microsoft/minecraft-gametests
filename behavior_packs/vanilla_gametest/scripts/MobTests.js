@@ -1,7 +1,8 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import * as GameTest from "mojang-gametest";
 import { BlockLocation, MinecraftBlockTypes, MinecraftEffectTypes, MinecraftItemTypes } from "mojang-minecraft";
 import GameTestExtensions from "./GameTestExtensions.js";
-
 
 const TicksPerSecond = 20;
 
@@ -279,7 +280,7 @@ GameTest.register("MobTests", "piglin_should_drop_different_loots", (test) => {
         try {
           player.selectedSlot = 0;
           player.interactWithEntity(piglin);
-        } catch { }
+        } catch {}
       })
       .thenExecuteAfter(200, () => {
         piglin.triggerEvent("stop_zombification_event");
@@ -292,7 +293,7 @@ GameTest.register("MobTests", "piglin_should_drop_different_loots", (test) => {
             if (item2 != undefined && item1.id != item2.id) {
               test.succeed();
             }
-          } catch (e) { }
+          } catch (e) {}
         }
       });
   }
@@ -301,13 +302,13 @@ GameTest.register("MobTests", "piglin_should_drop_different_loots", (test) => {
   .maxTicks(3000)
   .tag(GameTest.Tags.suiteDefault);
 
-GameTest.register('MobTests', 'ravager_flowing_water_edge_fall', (test) => {
-    const spawnType = "minecraft:ravager";
-    const spawnPos = new BlockLocation(2, 6, 2);
-    const targetPos = new BlockLocation(2, 2, 2);
-    test.spawn(spawnType, spawnPos);
-    test.succeedWhenEntityPresent(spawnType, targetPos, true);
+GameTest.register("MobTests", "ravager_flowing_water_edge_fall", (test) => {
+  const spawnType = "minecraft:ravager";
+  const spawnPos = new BlockLocation(2, 6, 2);
+  const targetPos = new BlockLocation(2, 2, 2);
+  test.spawn(spawnType, spawnPos);
+  test.succeedWhenEntityPresent(spawnType, targetPos, true);
 })
-    .maxTicks(60)
-    .structureName("mobtests:ravager_flowing_water_edge_fall")
-    .tag(GameTest.Tags.suiteDefault);
+  .maxTicks(60)
+  .structureName("mobtests:ravager_flowing_water_edge_fall")
+  .tag(GameTest.Tags.suiteDefault);

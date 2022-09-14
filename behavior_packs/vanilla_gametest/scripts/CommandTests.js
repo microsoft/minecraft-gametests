@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import * as GameTest from "mojang-gametest";
 import { BlockLocation } from "mojang-minecraft";
 
@@ -121,7 +123,9 @@ GameTest.registerAsync("CommandTests", "async_commands_api_dimension_spawn_pig",
   const spawnLoc = new BlockLocation(6, 2, 1);
 
   const absSpawnLoc = test.worldBlockLocation(new BlockLocation(6, 2, 1));
-  let result = await test.getDimension().runCommandAsync(`summon minecraft:pig ${absSpawnLoc.x} ${absSpawnLoc.y} ${absSpawnLoc.z}`);
+  let result = await test
+    .getDimension()
+    .runCommandAsync(`summon minecraft:pig ${absSpawnLoc.x} ${absSpawnLoc.y} ${absSpawnLoc.z}`);
   test.assert(result.successCount > 0, `Expected successCount > 0, ${result.successCount}`);
 
   await test.idle(20);

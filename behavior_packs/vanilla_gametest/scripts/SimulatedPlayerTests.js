@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import * as GameTest from "mojang-gametest";
 import GameTestExtensions from "./GameTestExtensions.js";
 import {

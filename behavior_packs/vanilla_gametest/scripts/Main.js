@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import "scripts/AllayTests.js";
 import "scripts/APITests.js";
 import "scripts/BlockEventTests.js";

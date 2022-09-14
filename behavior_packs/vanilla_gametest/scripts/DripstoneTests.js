@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import * as GameTest from "mojang-gametest";
 import { BlockLocation, MinecraftBlockTypes, MinecraftItemTypes, world } from "mojang-minecraft";
 import GameTestExtensions from "./GameTestExtensions.js";

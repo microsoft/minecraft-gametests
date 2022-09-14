@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import GameTestExtensions from "./GameTestExtensions.js";
 import * as GameTest from "mojang-gametest";
 import {
@@ -438,11 +440,26 @@ GameTest.register("APITests", "piston", (test) => {
   test.assert(pistonComp != undefined, "Expected piston component");
 
   let assertPistonState = (isMoving, isExpanded, isExpanding, isRetracted, isRetracting) => {
-    test.assert(pistonComp.isMoving === isMoving, `Unexpected isMoving, expected[${isMoving}] actual[${pistonComp.isMoving}]`);
-    test.assert(pistonComp.isExpanded === isExpanded, `Unexpected isExpanded, expected[${isExpanded}] actual[${pistonComp.isExpanded}]`);
-    test.assert(pistonComp.isExpanding === isExpanding, `Unexpected isExpanding, expected[${isExpanding}] actual[${pistonComp.isExpanding}]`);
-    test.assert(pistonComp.isRetracted === isRetracted, `Unexpected isRetracted, expected[${isRetracted}] actual[${pistonComp.isRetracted}]`);
-    test.assert(pistonComp.isRetracting === isRetracting, `Unexpected isRetracting, expected[${isRetracting}] actual[${pistonComp.isRetracting}]`);
+    test.assert(
+      pistonComp.isMoving === isMoving,
+      `Unexpected isMoving, expected[${isMoving}] actual[${pistonComp.isMoving}]`
+    );
+    test.assert(
+      pistonComp.isExpanded === isExpanded,
+      `Unexpected isExpanded, expected[${isExpanded}] actual[${pistonComp.isExpanded}]`
+    );
+    test.assert(
+      pistonComp.isExpanding === isExpanding,
+      `Unexpected isExpanding, expected[${isExpanding}] actual[${pistonComp.isExpanding}]`
+    );
+    test.assert(
+      pistonComp.isRetracted === isRetracted,
+      `Unexpected isRetracted, expected[${isRetracted}] actual[${pistonComp.isRetracted}]`
+    );
+    test.assert(
+      pistonComp.isRetracting === isRetracting,
+      `Unexpected isRetracting, expected[${isRetracting}] actual[${pistonComp.isRetracting}]`
+    );
   };
 
   test
@@ -454,7 +471,10 @@ GameTest.register("APITests", "piston", (test) => {
     })
     .thenIdle(3)
     .thenExecute(() => {
-      test.assert(pistonComp.attachedBlocks.length === 3, `Expected 3 attached blocks, actual [${pistonComp.attachedBlocks.length}]`);
+      test.assert(
+        pistonComp.attachedBlocks.length === 3,
+        `Expected 3 attached blocks, actual [${pistonComp.attachedBlocks.length}]`
+      );
       assertPistonState(true, false, true, false, false); // isMoving, isExpanding
     })
     .thenIdle(2)
@@ -1243,23 +1263,21 @@ GameTest.register("APITests", "tags", (test) => {
 
 //AI tests
 GameTest.register("APITests", "cant_set_target", async (test) => {
-    const player = test.spawnSimulatedPlayer(new BlockLocation(1, 2, 1));
-    let wolf = test.spawn("minecraft:wolf<minecraft:ageable_grow_up>", new BlockLocation(2, 2, 1));
+  const player = test.spawnSimulatedPlayer(new BlockLocation(1, 2, 1));
+  let wolf = test.spawn("minecraft:wolf<minecraft:ageable_grow_up>", new BlockLocation(2, 2, 1));
 
-    await test.idle(10);
-    try {
-        wolf.target = player;
-        test.fail("Target should be a read-only property");
-    }
-    catch (e) {
-        test.succeed();
-    }
+  await test.idle(10);
+  try {
+    wolf.target = player;
+    test.fail("Target should be a read-only property");
+  } catch (e) {
+    test.succeed();
+  }
 
-    wolf.kill();
-
+  wolf.kill();
 })
-    .structureName("ComponentTests:platform")
-    .tag(GameTest.Tags.suiteDefault);
+  .structureName("ComponentTests:platform")
+  .tag(GameTest.Tags.suiteDefault);
 
 GameTest.register("APITests", "can_get_null_target", (test) => {
   const player = test.spawnSimulatedPlayer(new BlockLocation(1, 2, 1));
@@ -1665,6 +1683,31 @@ GameTest.registerAsync("APITests", "entity_hurt_event_skeleton_hurts_player", as
       test.assert(e.cause === EntityDamageCause.projectile, "Expected cause to be entity_attack but got " + e.cause);
       test.assert(e.projectile.id === "minecraft:arrow", "Expected projectile to be arrow but got " + e.cause);
       test.assert(e.damage > 0, "Expected damage to be greater than 0, but got " + e.damage);
+      world.events.entityHurt.unsubscribe(hurtCallback);
+      test.succeed();
+    }
+  });
+})
+  .structureName("ComponentTests:large_glass_cage")
+  .tag(GameTest.Tags.suiteDefault);
+
+GameTest.registerAsync("APITests", "entity_hurt_event_skeleton_kills_player", async (test) => {
+  const player = test.spawnSimulatedPlayer(new BlockLocation(1, 2, 1));
+  const skeleton = test.spawn("skeleton", new BlockLocation(3, 2, 3));
+
+  player.getComponent("health").setCurrent(1);
+
+  let hurtCallback = world.events.entityHurt.subscribe((e) => {
+    if (e.hurtEntity === player) {
+      test.assert(
+        e.damagingEntity === skeleton,
+        "Expected damagingEntity to be skeleton but got " + e.damagingEntity.id
+      );
+      test.assert(e.cause === EntityDamageCause.projectile, "Expected cause to be entity_attack but got " + e.cause);
+      test.assert(e.projectile.id === "minecraft:arrow", "Expected projectile to be arrow but got " + e.cause);
+      test.assert(e.damage > 0, "Expected damage to be greater than 0, but got " + e.damage);
+      const health = player.getComponent("health").current;
+      test.assert(health < 0, "Expected negative player health, but got " + health);
       world.events.entityHurt.unsubscribe(hurtCallback);
       test.succeed();
     }

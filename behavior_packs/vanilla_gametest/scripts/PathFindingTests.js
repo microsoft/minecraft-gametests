@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import * as GameTest from "mojang-gametest";
 import { MinecraftBlockTypes, BlockProperties, BlockLocation, Location } from "mojang-minecraft";
 
@@ -277,46 +279,46 @@ GameTest.register("PathFindingTests", "bottleneck", (test) => {
   .tag(GameTest.Tags.suiteDisabled); // Villagers can get stuck on sleeping villagers sometimes
 
 GameTest.register("PathFindingTests", "doorway", (test) => {
-    const villagerEntitySpawnType = "minecraft:villager_v2<minecraft:spawn_farmer>";
+  const villagerEntitySpawnType = "minecraft:villager_v2<minecraft:spawn_farmer>";
 
-    test.spawn(villagerEntitySpawnType, new BlockLocation(2, 2, 6));
+  test.spawn(villagerEntitySpawnType, new BlockLocation(2, 2, 6));
 
-    test.succeedWhen(() => {
-        test.assertEntityPresent(villagerEntitySpawnType, new BlockLocation(2, 2, 2), true);
-    });
+  test.succeedWhen(() => {
+    test.assertEntityPresent(villagerEntitySpawnType, new BlockLocation(2, 2, 2), true);
+  });
 })
-    .padding(TEST_PADDING) // Space out villager tests to stop them from confusing each other
-    .batch("night")
-    .maxTicks(TEST_MAX_TICKS)
-    .tag(GameTest.Tags.suiteDefault);
+  .padding(TEST_PADDING) // Space out villager tests to stop them from confusing each other
+  .batch("night")
+  .maxTicks(TEST_MAX_TICKS)
+  .tag(GameTest.Tags.suiteDefault);
 
 GameTest.register("PathFindingTests", "doorway_with_stairs", (test) => {
-    const villagerEntitySpawnType = "minecraft:villager_v2<minecraft:spawn_farmer>";
+  const villagerEntitySpawnType = "minecraft:villager_v2<minecraft:spawn_farmer>";
 
-    test.spawn(villagerEntitySpawnType, new BlockLocation(2, 2, 8));
+  test.spawn(villagerEntitySpawnType, new BlockLocation(2, 2, 8));
 
-    test.succeedWhen(() => {
-        test.assertEntityPresent(villagerEntitySpawnType, new BlockLocation(2, 2, 2), true);
-    });
+  test.succeedWhen(() => {
+    test.assertEntityPresent(villagerEntitySpawnType, new BlockLocation(2, 2, 2), true);
+  });
 })
-    .padding(TEST_PADDING) // Space out villager tests to stop them from confusing each other
-    .batch("night")
-    .maxTicks(TEST_MAX_TICKS)
-    .tag(GameTest.Tags.suiteDefault);
+  .padding(TEST_PADDING) // Space out villager tests to stop them from confusing each other
+  .batch("night")
+  .maxTicks(TEST_MAX_TICKS)
+  .tag(GameTest.Tags.suiteDefault);
 
 GameTest.register("PathFindingTests", "doorway_with_slabs", (test) => {
-    const villagerEntitySpawnType = "minecraft:villager_v2<minecraft:spawn_farmer>";
+  const villagerEntitySpawnType = "minecraft:villager_v2<minecraft:spawn_farmer>";
 
-    test.spawn(villagerEntitySpawnType, new BlockLocation(2, 2, 8));
+  test.spawn(villagerEntitySpawnType, new BlockLocation(2, 2, 8));
 
-    test.succeedWhen(() => {
-        test.assertEntityPresent(villagerEntitySpawnType, new BlockLocation(2, 2, 2), true);
-    });
+  test.succeedWhen(() => {
+    test.assertEntityPresent(villagerEntitySpawnType, new BlockLocation(2, 2, 2), true);
+  });
 })
-    .padding(TEST_PADDING) // Space out villager tests to stop them from confusing each other
-    .batch("night")
-    .maxTicks(TEST_MAX_TICKS)
-    .tag(GameTest.Tags.suiteDefault);
+  .padding(TEST_PADDING) // Space out villager tests to stop them from confusing each other
+  .batch("night")
+  .maxTicks(TEST_MAX_TICKS)
+  .tag(GameTest.Tags.suiteDefault);
 
 GameTest.register("PathFindingTests", "big_obstacle_course", (test) => {
   const bedPos = new BlockLocation(4, 3, 6);
@@ -370,37 +372,37 @@ GameTest.register("PathFindingTests", "carpet_walk_around", (test) => {
 
 // Tests for a two blocks tall mob to properly pathfind around and over trapdoors. Does not require padding.
 GameTest.register("PathFindingTests", "trapdoors", (test) => {
-    const villagerEntitySpawnType = "minecraft:villager_v2<minecraft:spawn_farmer>";
+  const villagerEntitySpawnType = "minecraft:villager_v2<minecraft:spawn_farmer>";
 
-    const spawnPos = new Location(3.5, 2, 10.5);
-    const villager = test.spawnWithoutBehaviorsAtLocation(villagerEntitySpawnType, spawnPos);
+  const spawnPos = new Location(3.5, 2, 10.5);
+  const villager = test.spawnWithoutBehaviorsAtLocation(villagerEntitySpawnType, spawnPos);
 
-    const targetPos = new BlockLocation(3, 2, 2);
-    test.walkTo(villager, targetPos, 1);
+  const targetPos = new BlockLocation(3, 2, 2);
+  test.walkTo(villager, targetPos, 1);
 
-    test.succeedWhen(() => {
-        test.assertEntityPresent(villagerEntitySpawnType, targetPos, true);
-    });
+  test.succeedWhen(() => {
+    test.assertEntityPresent(villagerEntitySpawnType, targetPos, true);
+  });
 })
-    .maxTicks(TEST_MAX_TICKS)
-    .tag(GameTest.Tags.suiteDefault);
+  .maxTicks(TEST_MAX_TICKS)
+  .tag(GameTest.Tags.suiteDefault);
 
 // Tests for a one block tall mob to properly pathfind around and over trapdoors. Does not require padding.
 GameTest.register("PathFindingTests", "trapdoors_short_mob", (test) => {
-    const pigSpawnType = "minecraft:pig";
+  const pigSpawnType = "minecraft:pig";
 
-    const spawnPos = new Location(3.5, 2, 10.5);
-    const pig = test.spawnWithoutBehaviorsAtLocation(pigSpawnType, spawnPos);
+  const spawnPos = new Location(3.5, 2, 10.5);
+  const pig = test.spawnWithoutBehaviorsAtLocation(pigSpawnType, spawnPos);
 
-    const targetPos = new BlockLocation(3, 2, 2);
-    test.walkTo(pig, targetPos, 1);
+  const targetPos = new BlockLocation(3, 2, 2);
+  test.walkTo(pig, targetPos, 1);
 
-    test.succeedWhen(() => {
-        test.assertEntityPresent(pigSpawnType, targetPos, true);
-    });
+  test.succeedWhen(() => {
+    test.assertEntityPresent(pigSpawnType, targetPos, true);
+  });
 })
-    .maxTicks(TEST_MAX_TICKS)
-    .tag(GameTest.Tags.suiteDefault);
+  .maxTicks(TEST_MAX_TICKS)
+  .tag(GameTest.Tags.suiteDefault);
 
 ///
 // Register tests

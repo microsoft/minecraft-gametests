@@ -1,12 +1,7 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import * as GameTest from "mojang-gametest";
-import {
-  BlockLocation,
-  MinecraftBlockTypes,
-  Direction,
-  MinecraftItemTypes,
-  ItemStack,
-  world
-} from "mojang-minecraft";
+import { BlockLocation, MinecraftBlockTypes, Direction, MinecraftItemTypes, ItemStack, world } from "mojang-minecraft";
 import GameTestExtensions from "./GameTestExtensions.js";
 
 function giveItem(player, itemType, amount, slot) {
@@ -311,42 +306,44 @@ GameTest.register("ItemTests", "before_item_use_on_event_modifies_inventory_item
 GameTest.registerAsync("ItemTests", "item_using_events_fire_correctly", async (test) => {
   const player = test.spawnSimulatedPlayer(new BlockLocation(1, 2, 1));
 
-  let startedCharge = false, completedCharge = false, stoppedCharge = false;
+  let startedCharge = false,
+    completedCharge = false,
+    stoppedCharge = false;
 
   let itemStartCharge = world.events.itemStartCharge.subscribe((eventData) => {
-    if(eventData.source !== player) {
+    if (eventData.source !== player) {
       return;
     }
-    if(startedCharge) {
+    if (startedCharge) {
       test.fail("world.events.itemStartCharge should only have been invoked once");
     }
-    if(stoppedCharge || completedCharge) {
+    if (stoppedCharge || completedCharge) {
       test.fail("world.events.itemStartCharge called out of order");
     }
     startedCharge = true;
   });
-  
+
   let itemCompleteCharge = world.events.itemCompleteCharge.subscribe((eventData) => {
-    if(eventData.source !== player) {
+    if (eventData.source !== player) {
       return;
     }
-    if(completedCharge) {
+    if (completedCharge) {
       test.fail("world.events.itemCompleteCharge should only have been invoked once");
     }
-    if(startedCharge == false || stoppedCharge) {
+    if (startedCharge == false || stoppedCharge) {
       test.fail("world.events.itemCompleteCharge called out of order");
     }
     completedCharge = true;
   });
-    
+
   let itemStopCharge = world.events.itemStopCharge.subscribe((eventData) => {
-    if(eventData.source !== player) {
+    if (eventData.source !== player) {
       return;
     }
-    if(stoppedCharge) {
+    if (stoppedCharge) {
       test.fail("world.events.itemStopCharge should only have been invoked once");
     }
-    if(startedCharge == false || completedCharge == false) {
+    if (startedCharge == false || completedCharge == false) {
       test.fail("world.events.itemStopCharge called out of order");
     }
     stoppedCharge = true;
@@ -373,4 +370,3 @@ GameTest.registerAsync("ItemTests", "item_using_events_fire_correctly", async (t
   .maxTicks(300)
   .structureName("ComponentTests:platform")
   .tag(GameTest.Tags.suiteDefault);
-

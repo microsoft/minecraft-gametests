@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import { Direction } from "mojang-minecraft";
 import { ItemStack } from "mojang-minecraft";
 
@@ -51,7 +53,7 @@ export default class GameTestExtensions {
         return 1;
     }
   }
-  
+
   getMultiFaceDirection(direction) {
     switch (direction) {
       case Direction.down:

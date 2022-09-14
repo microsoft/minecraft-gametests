@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import * as GameTest from "mojang-gametest";
 import { BlockLocation, MinecraftBlockTypes, MinecraftItemTypes, BlockProperties, world } from "mojang-minecraft";
 import GameTestExtensions from "./GameTestExtensions.js";
@@ -584,43 +586,43 @@ GameTest.register("RedstoneTests", "torch_nor", async (test) => {
   test.pullLever(inputA);
   await test.idle(1);
   await test.until(() => {
-      testEx.assertBlockProperty("open_bit", FlatEastWest, output);
+    testEx.assertBlockProperty("open_bit", FlatEastWest, output);
   });
-  
+
   test.pullLever(inputA);
   await test.idle(1);
   await test.until(() => {
-      testEx.assertBlockProperty("open_bit", FlatEastWest, output);
+    testEx.assertBlockProperty("open_bit", FlatEastWest, output);
   });
-      
+
   test.pullLever(inputB);
   await test.idle(1);
   await test.until(() => {
-      testEx.assertBlockProperty("open_bit", FlatNorthSouth, output);
+    testEx.assertBlockProperty("open_bit", FlatNorthSouth, output);
   });
-        
+
   test.pullLever(inputB);
   await test.idle(1);
   await test.until(() => {
-      testEx.assertBlockProperty("open_bit", FlatEastWest, output);
+    testEx.assertBlockProperty("open_bit", FlatEastWest, output);
   });
-  
+
   test.pullLever(inputA);
   await test.idle(1);
   test.pullLever(inputB);
   await test.idle(1);
   await test.until(() => {
-      testEx.assertBlockProperty("open_bit", FlatNorthSouth, output);
+    testEx.assertBlockProperty("open_bit", FlatNorthSouth, output);
   });
-  
+
   test.pullLever(inputA);
   await test.idle(1);
-  test.pullLever(inputB);    
-  await test.idle(1)
+  test.pullLever(inputB);
+  await test.idle(1);
   await test.until(() => {
-      testEx.assertBlockProperty("open_bit", FlatEastWest, output);
-  })
-  
+    testEx.assertBlockProperty("open_bit", FlatEastWest, output);
+  });
+
   test.succeed();
 }).tag(GameTest.Tags.suiteDisabled); // test has 50% pass rate due to "timing" issues.
 

@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+
 import * as GameTest from "mojang-gametest";
 import { BlockLocation, MinecraftBlockTypes } from "mojang-minecraft";
 
@@ -13,7 +15,7 @@ let respawnanchor_explosion = (test) => {
       test.assertBlockPresent(MinecraftBlockTypes.wool, woolPos);
     })
     .thenExecuteAfter(5, () => {
-      player.interactWithBlock(anchorPos)
+      player.interactWithBlock(anchorPos);
     })
     .thenWait(() => {
       test.assertBlockPresent(MinecraftBlockTypes.water, anchorPos);
@@ -22,8 +24,9 @@ let respawnanchor_explosion = (test) => {
     .thenSucceed();
 };
 
-GameTest.register("RespawnAnchorTests", "inwater_explosion_not_destructive", (test) => respawnanchor_explosion(test))
-  .tag(GameTest.Tags.suiteDefault);
+GameTest.register("RespawnAnchorTests", "inwater_explosion_not_destructive", (test) =>
+  respawnanchor_explosion(test)
+).tag(GameTest.Tags.suiteDefault);
 
 GameTest.register("RespawnAnchorTests", "waterlogged_neighbour_explosion", (test) => respawnanchor_explosion(test))
   // Having waterlogged neighbour blocks counts as being in water
@@ -41,12 +44,12 @@ GameTest.register("RespawnAnchorTests", "onland_explosion_destructive", (test) =
       test.assertBlockPresent(MinecraftBlockTypes.wool, woolPos);
     })
     .thenExecuteAfter(5, () => {
-      player.interactWithBlock(anchorPos)
+      player.interactWithBlock(anchorPos);
     })
     .thenWait(() => {
       test.assertBlockState(anchorPos, (block) => {
-        return block.type == MinecraftBlockTypes.air || block.type == MinecraftBlockTypes.fire
-      })
+        return block.type == MinecraftBlockTypes.air || block.type == MinecraftBlockTypes.fire;
+      });
       test.assertBlockPresent(MinecraftBlockTypes.air, woolPos);
     })
     .thenSucceed();

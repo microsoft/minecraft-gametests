@@ -1,0 +1,1222 @@
+{
+    "content": [
+        {
+            "path": ".prettierrc.json"
+        },
+        {
+            "path": "manifest.json"
+        },
+        {
+            "path": "pack_icon.png"
+        },
+        {
+            "path": ".vscode/extensions.json"
+        },
+        {
+            "path": ".vscode/launch.json"
+        },
+        {
+            "path": ".vscode/settings.json"
+        },
+        {
+            "path": "scripts/AllayTests.js"
+        },
+        {
+            "path": "scripts/APITests.js"
+        },
+        {
+            "path": "scripts/BigMobTests.js"
+        },
+        {
+            "path": "scripts/BlockEventTests.js"
+        },
+        {
+            "path": "scripts/BlockTests.js"
+        },
+        {
+            "path": "scripts/CommandTests.js"
+        },
+        {
+            "path": "scripts/ComponentTests.js"
+        },
+        {
+            "path": "scripts/DebugTests.js"
+        },
+        {
+            "path": "scripts/DispenserTests.js"
+        },
+        {
+            "path": "scripts/DoorTests.js"
+        },
+        {
+            "path": "scripts/DripstoneTests.js"
+        },
+        {
+            "path": "scripts/DuplicationTests.js"
+        },
+        {
+            "path": "scripts/EnchantmentTests.js"
+        },
+        {
+            "path": "scripts/EntityQueryTests.js"
+        },
+        {
+            "path": "scripts/EntityTests.js"
+        },
+        {
+            "path": "scripts/ExtensionTests.js"
+        },
+        {
+            "path": "scripts/FireAvoidTests.js"
+        },
+        {
+            "path": "scripts/FlyingMachineTests.js"
+        },
+        {
+            "path": "scripts/FrogTests.js"
+        },
+        {
+            "path": "scripts/GameTestExtensions.js"
+        },
+        {
+            "path": "scripts/ItemEnchantmentsTests.js"
+        },
+        {
+            "path": "scripts/ItemTests.js"
+        },
+        {
+            "path": "scripts/Main.js"
+        },
+        {
+            "path": "scripts/MinecartTests.js"
+        },
+        {
+            "path": "scripts/MobTests.js"
+        },
+        {
+            "path": "scripts/MultifaceTests.js"
+        },
+        {
+            "path": "scripts/PathFindingTests.js"
+        },
+        {
+            "path": "scripts/PistonTests.js"
+        },
+        {
+            "path": "scripts/PlaceSeedsTests.js"
+        },
+        {
+            "path": "scripts/RaycastingTests.js"
+        },
+        {
+            "path": "scripts/RedstoneTests.js"
+        },
+        {
+            "path": "scripts/RespawnAnchorTests.js"
+        },
+        {
+            "path": "scripts/SculkTests.js"
+        },
+        {
+            "path": "scripts/SimulatedPlayerTests.js"
+        },
+        {
+            "path": "scripts/SmallMobTests.js"
+        },
+        {
+            "path": "scripts/TntTests.js"
+        },
+        {
+            "path": "scripts/VibrationTests.js"
+        },
+        {
+            "path": "scripts/WardenTests.js"
+        },
+        {
+            "path": "scripts/WaterPathfindingTests.js"
+        },
+        {
+            "path": "structures/AllayTests/allay_pickup_item.mcstructure"
+        },
+        {
+            "path": "structures/AllayTests/allay_unstucks_from_fence.mcstructure"
+        },
+        {
+            "path": "structures/AllayTests/allay_unstucks_from_lantern.mcstructure"
+        },
+        {
+            "path": "structures/APITests/armor_stand.mcstructure"
+        },
+        {
+            "path": "structures/APITests/assert_can_reach_location.mcstructure"
+        },
+        {
+            "path": "structures/APITests/assert_entity_present.mcstructure"
+        },
+        {
+            "path": "structures/APITests/assert_is_waterlogged.mcstructure"
+        },
+        {
+            "path": "structures/APITests/assert_item_entity_count_is.mcstructure"
+        },
+        {
+            "path": "structures/APITests/assert_redstone_power.mcstructure"
+        },
+        {
+            "path": "structures/APITests/cauldron.mcstructure"
+        },
+        {
+            "path": "structures/APITests/connectivity.mcstructure"
+        },
+        {
+            "path": "structures/APITests/create_explosion_advanced.mcstructure"
+        },
+        {
+            "path": "structures/APITests/create_explosion_basic.mcstructure"
+        },
+        {
+            "path": "structures/APITests/grow_pointed_dripstone.mcstructure"
+        },
+        {
+            "path": "structures/APITests/jukebox.mcstructure"
+        },
+        {
+            "path": "structures/APITests/maybe_fill_cauldron.mcstructure"
+        },
+        {
+            "path": "structures/APITests/piston.mcstructure"
+        },
+        {
+            "path": "structures/APITests/pulse_redstone.mcstructure"
+        },
+        {
+            "path": "structures/APITests/rotate_direction.mcstructure"
+        },
+        {
+            "path": "structures/APITests/sneaking.mcstructure"
+        },
+        {
+            "path": "structures/APITests/spawn_item.mcstructure"
+        },
+        {
+            "path": "structures/APITests/spread_from_face_toward_direction.mcstructure"
+        },
+        {
+            "path": "structures/APITests/teleport_keep_velocity_mob.mcstructure"
+        },
+        {
+            "path": "structures/APITests/vines.mcstructure"
+        },
+        {
+            "path": "structures/APITests/walk_to_location_far.mcstructure"
+        },
+        {
+            "path": "structures/BigMobTests/altitude_change_wall_on_left.mcstructure"
+        },
+        {
+            "path": "structures/BigMobTests/altitude_change_wall_on_right.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/concrete_pops_off_waterlogged_chest.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/concrete_solidifies_in_deep_water.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/concrete_solidifies_in_shallow_water.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/concrete_solidifies_next_to_water.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/dispenser_light_candles.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/explosion_drop_location.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/falling_sand_template.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/put_out_candles.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/sand_fall_boats.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/sand_fall_shulker.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/turtle_eggs_squish.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/turtle_eggs_squished_by_mob.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/turtle_eggs_survive_item.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/turtle_eggs_survive_xp.mcstructure"
+        },
+        {
+            "path": "structures/BlockTests/waterlogged_slab.mcstructure"
+        },
+        {
+            "path": "structures/CommandTests/commands_teleport.mcstructure"
+        },
+        {
+            "path": "structures/CommandTests/doublecage.mcstructure"
+        },
+        {
+            "path": "structures/ComponentTests/animal_pen.mcstructure"
+        },
+        {
+            "path": "structures/ComponentTests/aquarium.mcstructure"
+        },
+        {
+            "path": "structures/ComponentTests/glass_cage.mcstructure"
+        },
+        {
+            "path": "structures/ComponentTests/health_component.mcstructure"
+        },
+        {
+            "path": "structures/ComponentTests/large_animal_pen.mcstructure"
+        },
+        {
+            "path": "structures/ComponentTests/large_glass_cage.mcstructure"
+        },
+        {
+            "path": "structures/ComponentTests/leashable_component.mcstructure"
+        },
+        {
+            "path": "structures/ComponentTests/platform.mcstructure"
+        },
+        {
+            "path": "structures/ComponentTests/rideable_component.mcstructure"
+        },
+        {
+            "path": "structures/DebugTests/always_fail.mcstructure"
+        },
+        {
+            "path": "structures/DebugTests/always_succeed.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_arrow_trap.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_carpet_on_llama.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_charge_respawn_anchor.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_chest_on_llama.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_fire.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_fire_crash.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_horsearmor_on_horse.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_minecart.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_minecart_track.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_saddle_on_horse.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_saddle_on_pig.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_shears_mooshroom.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_shears_sheep.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_shears_snowgolem.mcstructure"
+        },
+        {
+            "path": "structures/DispenserTests/dispenser_water.mcstructure"
+        },
+        {
+            "path": "structures/DoorTests/close_door_after_passing_through.mcstructure"
+        },
+        {
+            "path": "structures/DoorTests/close_door_even_if_near_bed.mcstructure"
+        },
+        {
+            "path": "structures/DoorTests/door_maze.mcstructure"
+        },
+        {
+            "path": "structures/DoorTests/door_maze_3d.mcstructure"
+        },
+        {
+            "path": "structures/DoorTests/door_maze_crowded.mcstructure"
+        },
+        {
+            "path": "structures/DoorTests/four_villagers_one_door.mcstructure"
+        },
+        {
+            "path": "structures/DoorTests/inverted_door.mcstructure"
+        },
+        {
+            "path": "structures/DoorTests/villagers_cant_pass_closed_iron_door.mcstructure"
+        },
+        {
+            "path": "structures/DoorTests/villagers_can_pass_open_iron_door.mcstructure"
+        },
+        {
+            "path": "structures/DripstoneTests/stalactite_fall.mcstructure"
+        },
+        {
+            "path": "structures/DripstoneTests/stalactite_fall_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/DripstoneTests/stalactite_fall_no_dupe.mcstructure"
+        },
+        {
+            "path": "structures/DripstoneTests/stalactite_hurt.mcstructure"
+        },
+        {
+            "path": "structures/DripstoneTests/stalagmite_break.mcstructure"
+        },
+        {
+            "path": "structures/DripstoneTests/stalagmite_hurt.mcstructure"
+        },
+        {
+            "path": "structures/DripstoneTests/stalagmite_stalactite_separation.mcstructure"
+        },
+        {
+            "path": "structures/DripstoneTests/thickness_update.mcstructure"
+        },
+        {
+            "path": "structures/DuplicationTests/detector_rail.mcstructure"
+        },
+        {
+            "path": "structures/DuplicationTests/powered_rail_straight.mcstructure"
+        },
+        {
+            "path": "structures/DuplicationTests/powered_rail_twist.mcstructure"
+        },
+        {
+            "path": "structures/DuplicationTests/rail_classic.mcstructure"
+        },
+        {
+            "path": "structures/EnchantmentTests/FrostWalkerFreezesWater.mcstructure"
+        },
+        {
+            "path": "structures/EnchantmentTests/SpecFrstWlkFreeze.mcstructure"
+        },
+        {
+            "path": "structures/EntityQueryTests/dimension_entity_query.mcstructure"
+        },
+        {
+            "path": "structures/EntityTests/items_float_up.mcstructure"
+        },
+        {
+            "path": "structures/EntityTests/shallow_item_stream.mcstructure"
+        },
+        {
+            "path": "structures/EntityTests/shallow_item_stream_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/can_walk_around_lava.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/dont_cut_corner_over_fire.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/dont_cut_corner_over_fire_far.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/dont_walk_into_magma.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/dont_walk_into_magma_diagonal.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/fire_maze.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/fire_maze_3d.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/golem_chase_zombie_over_fire.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/villager_dont_flee_over_fire.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/walk_far_out_of_magma.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/walk_far_out_of_magma_diagonal.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/walk_out_of_magma.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/walk_out_of_magma_diagonal.mcstructure"
+        },
+        {
+            "path": "structures/FireAvoidTests/zombie_chase_villager_over_fire.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/m2_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/m3_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/machine_a.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/machine_b.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/machine_c.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/machine_d.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/machine_e.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/machine_f.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/machine_g.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/machine_h.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/machine_i.mcstructure"
+        },
+        {
+            "path": "structures/FlyingMachineTests/m_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/FrogTests/cold_frog_magmacube_drop_verdant.mcstructure"
+        },
+        {
+            "path": "structures/FrogTests/frog_eat_slime_drop_slimeball.mcstructure"
+        },
+        {
+            "path": "structures/FrogTests/frog_egg_flow_water.mcstructure"
+        },
+        {
+            "path": "structures/FrogTests/frog_jump.mcstructure"
+        },
+        {
+            "path": "structures/FrogTests/frog_lay_egg.mcstructure"
+        },
+        {
+            "path": "structures/FrogTests/temperate_frog_magmacube_drop_ochre.mcstructure"
+        },
+        {
+            "path": "structures/FrogTests/warm_frog_magmacube_drop_pearlescent.mcstructure"
+        },
+        {
+            "path": "structures/Generic/flat_5x5x5.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/detector_rail_piston.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/detector_rail_piston_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/detector_rail_slope.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/turn.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/water_slowdown.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/water_slowdown_chest_cart.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/water_slowdown_commandblock_cart.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/water_slowdown_hopper_cart.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/water_slowdown_slope_down.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/water_slowdown_slope_up.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/water_slowdown_tnt_cart.mcstructure"
+        },
+        {
+            "path": "structures/MinecartTests/water_slowdown_vertical.mcstructure"
+        },
+        {
+            "path": "structures/MobTests/axolotl_lure.mcstructure"
+        },
+        {
+            "path": "structures/MobTests/drowning_test.mcstructure"
+        },
+        {
+            "path": "structures/MobTests/effect_durations.mcstructure"
+        },
+        {
+            "path": "structures/MobTests/golem_vs_pillager.mcstructure"
+        },
+        {
+            "path": "structures/MobTests/mobtests.drowning_test.mcstructure"
+        },
+        {
+            "path": "structures/MobTests/piglin_should_drop_different_loots.mcstructure"
+        },
+        {
+            "path": "structures/MobTests/ravager_flowing_water_edge_fall.mcstructure"
+        },
+        {
+            "path": "structures/MobTests/silverfish_no_suffocate.mcstructure"
+        },
+        {
+            "path": "structures/MobTests/small_mobs_breathe_in_boats.mcstructure"
+        },
+        {
+            "path": "structures/MobTests/small_mobs_keep_head_above_water.mcstructure"
+        },
+        {
+            "path": "structures/MobTests/zombie_burn.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/break_if_all_supporting_faces_destroyed.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/default_multiface_block_has_all_sides.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/dont_spread_into_flowing_water.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/dont_spread_into_lava.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/dont_spread_toward_opposite_face.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/dont_spread_toward_same_face.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/remove_face_if_support_destroyed.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/remove_if_has_no_faces.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_around_partly_blocked_corner.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_from_air_to_water.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_from_ceiling_around_corner.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_from_floor_around_corner.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_from_wall_around_corner.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_from_water_to_air.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_on_flat_ceiling.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_on_flat_floor.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_on_flat_wall.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_sideways_within_same_corner.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_up_within_same_corner.mcstructure"
+        },
+        {
+            "path": "structures/MultifaceTests/spread_within_water.mcstructure"
+        },
+        {
+            "path": "structures/PathFindingTests/big_obstacle_course.mcstructure"
+        },
+        {
+            "path": "structures/PathFindingTests/bottleneck.mcstructure"
+        },
+        {
+            "path": "structures/PathFindingTests/carpet_walk_around.mcstructure"
+        },
+        {
+            "path": "structures/PathFindingTests/doorway.mcstructure"
+        },
+        {
+            "path": "structures/PathFindingTests/doorway_with_slabs.mcstructure"
+        },
+        {
+            "path": "structures/PathFindingTests/doorway_with_stairs.mcstructure"
+        },
+        {
+            "path": "structures/PathFindingTests/simple.mcstructure"
+        },
+        {
+            "path": "structures/PathFindingTests/trapdoors.mcstructure"
+        },
+        {
+            "path": "structures/PathFindingTests/trapdoors_short_mob.mcstructure"
+        },
+        {
+            "path": "structures/PathFindingTests/veritcal_template.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/backside.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/backside_fence.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/block_leave.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/block_leave_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/double_extender.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/double_extender_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/entity_backside.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/honey_block_entity_drag_down.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/honey_block_entity_drag_sideways.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/instant_repeater.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/instant_retraction.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/monostable.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/monostable_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/normal_extend.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/observer_retraction_timing.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/one_tick_pulse.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/one_tick_pulse_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/push_limit.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/quasiconnectivity.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/quasiconnectivity_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/random_tick_forcer.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/random_tick_forcer_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/redstone_bud.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/redstone_matrix.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/redstone_simple_horizontal_bud.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/redstone_simple_vertical_bud.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/slime_block_pull.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/sticky_extend.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/triple_extender.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/triple_extender_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/update_order.mcstructure"
+        },
+        {
+            "path": "structures/PistonTests/update_order_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/PlaceSeedsTests/place_seed_on_farmland.mcstructure"
+        },
+        {
+            "path": "structures/RaycastingTests/get_block_from_vector.mcstructure"
+        },
+        {
+            "path": "structures/RaycastingTests/get_entity_from_vector.mcstructure"
+        },
+        {
+            "path": "structures/RaycastingTests/player_looks_block.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/comparator_container.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/comparator_logic.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/dust_loop_depowering.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/dust_loop_depowering_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/dust_propagation.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/dust_propagation_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/itemframe_override.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/itemframe_override_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/lever_power.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/observer_clock.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/repeater_clock.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/repeater_delay.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/repeater_delay_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/repeater_delay_lines.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/repeater_lock.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/repeater_regeneration.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/rs_latch.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/rs_latch_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/subtractor_logic.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/torch_monostable.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/torch_monostable_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/torch_nand.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/torch_nor.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/wireredirect_nonconductor.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/wireredirect_nonconductor_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/wire_redirect.mcstructure"
+        },
+        {
+            "path": "structures/RedstoneTests/wire_redirect_bedrock.mcstructure"
+        },
+        {
+            "path": "structures/RespawnAnchorTests/inwater_explosion_not_destructive.mcstructure"
+        },
+        {
+            "path": "structures/RespawnAnchorTests/onland_explosion_destructive.mcstructure"
+        },
+        {
+            "path": "structures/RespawnAnchorTests/waterlogged_neighbour_explosion.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/catalyst_no_xp_death.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/charge_cap.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/charge_decay_sculk.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/charge_decay_sculk_vein.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/charge_forced_direction.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/charge_in_air_disappear.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/charge_in_air_jump.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/charge_merging.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/charge_redirection.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/multiple_catalysts_multiple_deaths.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/multiple_catalysts_one_death.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/sculk_growth_spawning.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_from_moving_blocks.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_on_player_death.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_path.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_path_restricted.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_pillar_up.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_stairway_down.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_stairway_up.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_stairway_up_unsupported.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_to_moving_blocks.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_under_water.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_uneven.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/spread_uneven_overcharged.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/vein_consume_blocks.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/vein_non_place_blocks.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/vein_non_spread_blocks.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/vein_non_spread_catalyst.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/vein_non_spread_fire.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/vein_spread_blocks.mcstructure"
+        },
+        {
+            "path": "structures/SculkTests/vein_spread_blocks_replaceable.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/blaze_trap.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/destroy_block.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/destroy_block_creative.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/interact.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/interact_with_block.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/interact_with_entity.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/jump.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/move.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/move_in_minecart.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/navigate_to_location.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/sneaking.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/stop_moving.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/target_practice.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/use_item.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/use_item_in_slot_on_block.mcstructure"
+        },
+        {
+            "path": "structures/SimulatedPlayerTests/use_item_on_block.mcstructure"
+        },
+        {
+            "path": "structures/SmallMobTests/fence_corner.mcstructure"
+        },
+        {
+            "path": "structures/SmallMobTests/fence_post.mcstructure"
+        },
+        {
+            "path": "structures/SmallMobTests/fence_side.mcstructure"
+        },
+        {
+            "path": "structures/TntTests/bedrock_cannon.mcstructure"
+        },
+        {
+            "path": "structures/TntTests/cannon.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/activation_cooldown.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/activation_delay.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/activation_duration.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/activation_multiple_vibrations.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/activation_wool_occlusion.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/activation_wool_occlusion_no_bias.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/detection_radius.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_block_change.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_block_close.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_block_destroy.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_block_open.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_container_close.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_container_open.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_dispense_fail.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_entity_damage.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_entity_move.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_entity_move_carpet.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_entity_move_cobweb.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_entity_move_dampening.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_entity_move_powder_snow.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_entity_move_scaffolding.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_entity_move_sneaking.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_entity_move_sneaking_on_sensor.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_entity_move_wool.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_entity_place.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_equip.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_explode.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_flap_bee.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_flap_chicken.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_flap_parrot.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_fluid_pickup.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_fluid_place.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_hit_ground.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_hit_ground_dampening.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_hit_ground_wool.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_lightning_strike.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_piston_contract.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_piston_extend.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_projectile_land.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_projectile_land_wool.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_projectile_shoot.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_sculk_touch_wool.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_splash.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_splash_boat_on_bubble_column.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_swim.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_swim_boat.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_swim_boat_still.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/event_swim_still.mcstructure"
+        },
+        {
+            "path": "structures/VibrationTests/output_distance.mcstructure"
+        },
+        {
+            "path": "structures/WardenTests/warden_despawn.mcstructure"
+        },
+        {
+            "path": "structures/WardenTests/warden_go_to_projectile.mcstructure"
+        },
+        {
+            "path": "structures/WardenTests/warden_kill_moving_entity.mcstructure"
+        },
+        {
+            "path": "structures/WardenTests/warden_path_lava.mcstructure"
+        },
+        {
+            "path": "structures/WardenTests/warden_path_water.mcstructure"
+        },
+        {
+            "path": "structures/WardenTests/warden_sniff_and_kill_player_before_mob.mcstructure"
+        },
+        {
+            "path": "structures/WardenTests/warden_sniff_and_kill_static_entity.mcstructure"
+        },
+        {
+            "path": "structures/WaterPathfindingTests/axolotl_lava_walkaround.mcstructure"
+        },
+        {
+            "path": "structures/WaterPathfindingTests/fish_corner_swimaround.mcstructure"
+        }
+    ]
+}

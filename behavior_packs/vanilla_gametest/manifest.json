@@ -1,15 +1,15 @@
 {
   "format_version": 2,
   "header": {
-    "description": "resourcePack.vanilla_server.gametest.description",
-    "name": "resourcePack.vanilla_server.gametest.name",
+    "description": "Vanilla gameplay tests",
+    "name": "Vanilla GameTests",
     "uuid": "fd375b0a-4bdd-4572-9268-e55a79cf99d3",
     "version": [ 0, 0, 1 ],
     "min_engine_version": [ 1, 14, 0 ]
   },
   "modules": [
     {
-      "description": "resourcePack.vanilla_server.gametest.description",
+      "description": "Vanilla gameplay tests",
       "type": "script",
       "uuid": "0b235875-a72a-4f8f-b1ad-50f4659a58cf",
       "version": [ 0, 0, 1 ],
