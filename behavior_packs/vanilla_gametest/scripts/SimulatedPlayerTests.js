@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
+import * as GameTest from "@minecraft/server-gametest";
 import GameTestExtensions from "./GameTestExtensions.js";
 import {
   BlockLocation,
@@ -10,7 +10,7 @@ import {
   MinecraftBlockTypes,
   MinecraftItemTypes,
   world,
-} from "mojang-minecraft";
+} from "@minecraft/server";
 
 function isNear(n1, n2) {
   return Math.abs(n1 - n2) < 0.01;
@@ -1000,7 +1000,7 @@ GameTest.register("SimulatedPlayerTests", "destroy_block_creative", (test) => {
   test
     .startSequence()
     .thenExecuteAfter(5, () => {
-      player.runCommand("gamemode creative");
+      player.runCommandAsync("gamemode creative");
     })
     .thenExecute(() => {
       player.breakBlock(blockLoc);
@@ -1020,7 +1020,7 @@ GameTest.registerAsync("SimulatedPlayerTests", "run_command_after_spawn", async 
 
   let player = test.spawnSimulatedPlayer(spawnLoc);
   test.assertEntityPresent("player", spawnLoc);
-  player.runCommand("kill @s");
+  player.runCommandAsync("kill @s");
   test.assertEntityPresent("player", spawnLoc, false);
   test.succeed();
 })

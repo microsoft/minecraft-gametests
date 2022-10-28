@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
-import { BlockLocation, Location } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation, Location } from "@minecraft/server";
 
 const BIGMOB_TEST_MAX_TICKS = 100;
 const BIGMOB_TEST_STARTUP_TICKS = 0;

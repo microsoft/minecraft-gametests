@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
+import * as GameTest from "@minecraft/server-gametest";
 import {
   BlockLocation,
   MinecraftBlockTypes,
@@ -9,7 +9,7 @@ import {
   Direction,
   world,
   Location,
-} from "mojang-minecraft";
+} from "@minecraft/server";
 import GameTestExtensions from "./GameTestExtensions.js";
 
 const TicksPerSecond = 20;
@@ -346,7 +346,7 @@ GameTest.register("BlockTests", "powder_snow_leather_boots_walk", (test) => {
   test
     .startSequence()
     .thenExecuteAfter(5, () => {
-      playerSim.dimension.runCommand("replaceitem entity playerSim_snow slot.armor.feet 0 leather_boots");
+      playerSim.dimension.runCommandAsync("replaceitem entity playerSim_snow slot.armor.feet 0 leather_boots");
     })
     .thenExecuteAfter(10, () => playerSim.moveToLocation(new Location(1, 3, 2.5)))
     .thenExecuteAfter(40, () => test.assertEntityPresent("player", new BlockLocation(1, 4, 2)))

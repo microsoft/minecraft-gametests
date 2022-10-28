@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
-import { MinecraftItemTypes, ItemStack, MinecraftEnchantmentTypes, Enchantment } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { MinecraftItemTypes, ItemStack, MinecraftEnchantmentTypes, Enchantment } from "@minecraft/server";
 
 GameTest.register("ItemEnchantmentsTests", "item_get_enchantments_component", (test) => {
   const itemStack = new ItemStack(MinecraftItemTypes.ironSword);

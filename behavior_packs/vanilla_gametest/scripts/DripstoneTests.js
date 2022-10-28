@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
-import { BlockLocation, MinecraftBlockTypes, MinecraftItemTypes, world } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation, MinecraftBlockTypes, MinecraftItemTypes, world } from "@minecraft/server";
 import GameTestExtensions from "./GameTestExtensions.js";
 
 function placeDripstoneTip(test, pos, hanging, waterlogged = false) {

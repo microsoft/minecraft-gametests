@@ -1,5 +1,5 @@
-import * as GameTest from "mojang-gametest";
-import { BlockLocation, MinecraftBlockTypes } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation, MinecraftBlockTypes } from "@minecraft/server";
 
 function runAsLlama(test) {
   const llamaEntityType = "llama";

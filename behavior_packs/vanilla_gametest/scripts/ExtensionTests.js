@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
+import * as GameTest from "@minecraft/server-gametest";
 import GameTestExtensions from "./GameTestExtensions.js";
-import { BlockLocation } from "mojang-minecraft";
+import { BlockLocation } from "@minecraft/server";
 
 GameTest.register("ExtensionTests", "add_entity_in_boat", (test) => {
   const testEx = new GameTestExtensions(test);

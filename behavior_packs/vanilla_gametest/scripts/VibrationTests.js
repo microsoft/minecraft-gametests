@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
+import * as GameTest from "@minecraft/server-gametest";
 import {
   BlockLocation,
   Direction,
@@ -9,7 +9,7 @@ import {
   MinecraftBlockTypes,
   MinecraftItemTypes,
   TicksPerSecond,
-} from "mojang-minecraft";
+} from "@minecraft/server";
 import GameTestExtensions from "./GameTestExtensions.js";
 
 const SENSOR_ACTIVE_TICKS = 40;

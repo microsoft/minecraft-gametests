@@ -1,5 +1,5 @@
-import * as GameTest from "mojang-gametest";
-import { BlockLocation } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation } from "@minecraft/server";
 
 GameTest.register("StarterTests", "simpleMobTest", (test) => {
   const attackerId = "fox";

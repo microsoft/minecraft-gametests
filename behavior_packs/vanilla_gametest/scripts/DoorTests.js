@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
-import { BlockLocation } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation } from "@minecraft/server";
 import GameTestExtensions from "./GameTestExtensions.js";
 
 const DOOR_TEST_PADDING = 100; // The padding for the door tests will need to be increased some more to prevent the interference

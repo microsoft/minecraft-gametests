@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
-import { BlockLocation, MinecraftBlockTypes, ItemStack, MinecraftItemTypes, Direction } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation, MinecraftBlockTypes, ItemStack, MinecraftItemTypes, Direction } from "@minecraft/server";
 
 function giveItem(player, itemType, amount, slot) {
   const inventoryContainer = player.getComponent("inventory").container;

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
-import { BlockLocation, Location, MinecraftItemTypes, ItemStack } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation, Location, MinecraftItemTypes, ItemStack } from "@minecraft/server";
 
 function isNear(n1, n2) {
   return Math.abs(n1 - n2) < 0.01;

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
-import { BlockLocation, BlockProperties, MinecraftBlockTypes, TicksPerSecond } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation, BlockProperties, MinecraftBlockTypes, TicksPerSecond } from "@minecraft/server";
 import GameTestExtensions from "./GameTestExtensions.js";
 
 const TEST_PADDING = 5;

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
-import { BlockLocation, MinecraftItemTypes, ItemStack, world } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation, MinecraftItemTypes, ItemStack, world } from "@minecraft/server";
 
 GameTest.register("DebugTests", "always_fail", (test) => {
   // Do nothing, let the test time out

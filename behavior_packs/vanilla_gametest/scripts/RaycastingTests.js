@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
+import * as GameTest from "@minecraft/server-gametest";
 import {
   BlockLocation,
   BlockRaycastOptions,
@@ -8,7 +8,7 @@ import {
   MinecraftBlockTypes,
   Location,
   Vector,
-} from "mojang-minecraft";
+} from "@minecraft/server";
 
 const replacementBlock = MinecraftBlockTypes.redGlazedTerracotta;
 
@@ -56,9 +56,10 @@ function lookAtThree(test, blocks, blockVectorOptions) {
 GameTest.register("RaycastingTests", "player_looks_under_water", (test) => {
   var blocks = [new BlockLocation(1, 1, 1), new BlockLocation(2, 1, 1), new BlockLocation(3, 1, 1)];
 
-  const blockVectorOptions = new BlockRaycastOptions();
-  blockVectorOptions.includePassableBlocks = false;
-  blockVectorOptions.includeLiquidBlocks = false;
+  const blockVectorOptions = {
+    includePassableBlocks: false,
+    includeLiquidBlocks: false,
+  };
 
   lookAtThree(test, blocks, blockVectorOptions);
 })
@@ -69,9 +70,10 @@ GameTest.register("RaycastingTests", "player_looks_under_water", (test) => {
 GameTest.register("RaycastingTests", "player_looks_at_water", (test) => {
   var blocks = [new BlockLocation(1, 2, 1), new BlockLocation(2, 2, 1), new BlockLocation(3, 2, 1)];
 
-  const blockVectorOptions = new BlockRaycastOptions();
-  blockVectorOptions.includePassableBlocks = true;
-  blockVectorOptions.includeLiquidBlocks = true;
+  const blockVectorOptions = {
+    includePassableBlocks: true,
+    includeLiquidBlocks: true,
+  };
 
   lookAtThree(test, blocks, blockVectorOptions);
 })
@@ -82,9 +84,10 @@ GameTest.register("RaycastingTests", "player_looks_at_water", (test) => {
 GameTest.register("RaycastingTests", "player_looks_under_carpet", (test) => {
   var blocks = [new BlockLocation(1, 2, 0), new BlockLocation(2, 2, 0), new BlockLocation(3, 2, 0)];
 
-  const blockVectorOptions = new BlockRaycastOptions();
-  blockVectorOptions.includePassableBlocks = false;
-  blockVectorOptions.includeLiquidBlocks = false;
+  const blockVectorOptions = {
+    includePassableBlocks: false,
+    includeLiquidBlocks: false,
+  };
 
   lookAtThree(test, blocks, blockVectorOptions);
 })
@@ -95,9 +98,10 @@ GameTest.register("RaycastingTests", "player_looks_under_carpet", (test) => {
 GameTest.register("RaycastingTests", "player_looks_at_carpet", (test) => {
   var blocks = [new BlockLocation(1, 3, 0), new BlockLocation(2, 3, 0), new BlockLocation(3, 3, 0)];
 
-  const blockVectorOptions = new BlockRaycastOptions();
-  blockVectorOptions.includePassableBlocks = true;
-  blockVectorOptions.includeLiquidBlocks = false;
+  const blockVectorOptions = {
+    includePassableBlocks: true,
+    includeLiquidBlocks: false,
+  };
 
   lookAtThree(test, blocks, blockVectorOptions);
 })
@@ -107,10 +111,10 @@ GameTest.register("RaycastingTests", "player_looks_at_carpet", (test) => {
 
 GameTest.register("RaycastingTests", "get_block_from_vector", (test) => {
   let dimension = test.getDimension();
-  const blockVectorOptions = new BlockRaycastOptions();
-
-  blockVectorOptions.includePassableBlocks = false;
-  blockVectorOptions.includeLiquidBlocks = false;
+  const blockVectorOptions = {
+    includePassableBlocks: false,
+    includeLiquidBlocks: false,
+  };
 
   const bars = dimension.getBlockFromRay(
     test.worldLocation(new Location(0.5, 2, 1.5)),

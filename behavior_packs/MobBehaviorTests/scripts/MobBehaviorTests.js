@@ -1,6 +1,6 @@
-import * as GameTest from "mojang-gametest";
-import { MinecraftBlockTypes, BlockLocation } from "mojang-minecraft";
-import { Utilities } from "scripts/Utilities.js";
+import * as GameTest from "@minecraft/server-gametest";
+import { MinecraftBlockTypes, BlockLocation } from "@minecraft/server";
+import { Utilities } from "Utilities.js";
 
 // Tests the behavior of zombies chasing villagers around some walls.
 function zombieVillagerChase(test) {

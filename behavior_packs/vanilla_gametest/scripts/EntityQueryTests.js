@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
 import GameTestExtensions from "./GameTestExtensions.js";
-import * as GameTest from "mojang-gametest";
+import * as GameTest from "@minecraft/server-gametest";
 import {
   BlockAreaSize,
   BlockLocation,
@@ -10,7 +10,7 @@ import {
   GameMode,
   Location,
   world,
-} from "mojang-minecraft";
+} from "@minecraft/server";
 
 GameTest.register("EntityQueryTests", "world_player_query", (test) => {
   const player = test.spawnSimulatedPlayer(new BlockLocation(1, 2, 1), "world_player_1");
@@ -101,14 +101,14 @@ GameTest.register("EntityQueryTests", "dimension_entity_query", (test) => {
   test
     .startSequence()
     .thenExecuteAfter(2, () => {
-      dimension.runCommand(`tag @a[name=${p1Name}] add selector_tag`);
-      dimension.runCommand(`gamemode creative @a[name=${p1Name}]`);
-      dimension.runCommand(`xp 7 @a[name=${p1Name}]`); // level 1
+      dimension.runCommandAsync(`tag @a[name=${p1Name}] add selector_tag`);
+      dimension.runCommandAsync(`gamemode creative @a[name=${p1Name}]`);
+      dimension.runCommandAsync(`xp 7 @a[name=${p1Name}]`); // level 1
       try {
-        dimension.runCommand("scoreboard objectives add test_objective dummy");
+        dimension.runCommandAsync("scoreboard objectives add test_objective dummy");
       } catch {}
-      dimension.runCommand(`scoreboard players set ${p1Name} test_objective 2`); // set test_objective=2 for player 1
-      dimension.runCommand(`scoreboard players set ${p2Name} test_objective 0`); // set test_objective=2 for player 2
+      dimension.runCommandAsync(`scoreboard players set ${p1Name} test_objective 2`); // set test_objective=2 for player 1
+      dimension.runCommandAsync(`scoreboard players set ${p2Name} test_objective 0`); // set test_objective=2 for player 2
       e7.setBodyRotation(90);
       e8.lookAtBlock(new BlockLocation(5, 2, 6)); // Look down ~48 degrees
     })

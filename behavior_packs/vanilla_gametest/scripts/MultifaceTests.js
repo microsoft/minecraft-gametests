@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
+import * as GameTest from "@minecraft/server-gametest";
 import {
   BlockLocation,
   MinecraftBlockTypes,
@@ -8,7 +8,7 @@ import {
   MinecraftItemTypes,
   Direction,
   world,
-} from "mojang-minecraft";
+} from "@minecraft/server";
 import GameTestExtensions from "./GameTestExtensions.js";
 
 const DOWN = Direction.down;

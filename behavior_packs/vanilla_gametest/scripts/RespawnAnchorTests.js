@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
-import { BlockLocation, MinecraftBlockTypes } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation, MinecraftBlockTypes } from "@minecraft/server";
 
 let respawnanchor_explosion = (test) => {
   const player = test.spawnSimulatedPlayer(new BlockLocation(2, 2, 2));

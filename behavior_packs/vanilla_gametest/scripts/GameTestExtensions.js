@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import { Direction } from "mojang-minecraft";
-import { ItemStack } from "mojang-minecraft";
+import { Direction } from "@minecraft/server";
+import { ItemStack } from "@minecraft/server";
 
 export default class GameTestExtensions {
   constructor(test) {

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
-import { BlockLocation, TicksPerSecond, Location } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation, TicksPerSecond, Location } from "@minecraft/server";
 const WARDEN_TESTS_PADDING = 16; // The paddings is there to make sure vibrations don't interefere with the warden
 
 GameTest.register("WardenTests", "warden_despawn", (test) => {

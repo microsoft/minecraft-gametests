@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
+import * as GameTest from "@minecraft/server-gametest";
 import {
   world,
   MinecraftBlockTypes,
@@ -9,7 +9,7 @@ import {
   ItemStack,
   GameMode,
   Direction,
-} from "mojang-minecraft";
+} from "@minecraft/server";
 
 function registerBlockBreakTest(gameMode, blockType, blockBreakTicks) {
   GameTest.registerAsync("BlockEventTests", `block_break_event_${gameMode}_${blockType.id}`, async (test) => {

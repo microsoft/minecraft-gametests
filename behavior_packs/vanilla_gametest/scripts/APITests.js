@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
 import GameTestExtensions from "./GameTestExtensions.js";
-import * as GameTest from "mojang-gametest";
+import * as GameTest from "@minecraft/server-gametest";
 import {
   BlockLocation,
   BlockProperties,
@@ -20,7 +20,7 @@ import {
   Location,
   Vector,
   world,
-} from "mojang-minecraft";
+} from "@minecraft/server";
 
 GameTest.register("APITests", "on_entity_created", (test) => {
   const entityCreatedCallback = world.events.entityCreate.subscribe((entity) => {
@@ -1245,7 +1245,7 @@ GameTest.register("APITests", "tags", (test) => {
   test
     .startSequence()
     .thenExecuteAfter(2, () => {
-      dimension.runCommand("tag @p[name=tag_player] add test_tag_1");
+      dimension.runCommandAsync("tag @p[name=tag_player] add test_tag_1");
       test.assert(player.hasTag("test_tag_1"), "Expected tag test_tag_1");
       test.assert(!player.hasTag("test_tag_2"), "Did not expect tag test_tag_2");
       test.assert(player.removeTag("test_tag_1"), "Expected successful tag removal");

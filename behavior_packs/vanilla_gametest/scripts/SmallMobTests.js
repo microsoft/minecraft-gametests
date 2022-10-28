@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
-import * as GameTest from "mojang-gametest";
-import { BlockLocation, Location } from "mojang-minecraft";
+import * as GameTest from "@minecraft/server-gametest";
+import { BlockLocation, Location } from "@minecraft/server";
 
 GameTest.register("SmallMobTests", "fence_corner", (test) => {
   const piglinEntityType = "minecraft:piglin<minecraft:entity_born>";
