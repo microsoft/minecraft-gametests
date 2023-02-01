@@ -1,14 +1,7 @@
 // Copyright (c) Microsoft Corporation.  All rights reserved.
 
 import * as GameTest from "@minecraft/server-gametest";
-import {
-  BlockLocation,
-  BlockRaycastOptions,
-  EntityRaycastOptions,
-  MinecraftBlockTypes,
-  Location,
-  Vector,
-} from "@minecraft/server";
+import { BlockLocation, MinecraftBlockTypes, Location, Vector } from "@minecraft/server";
 
 const replacementBlock = MinecraftBlockTypes.redGlazedTerracotta;
 
@@ -21,7 +14,7 @@ function lookAtThree(test, blocks, blockVectorOptions) {
       player.lookAtBlock(blocks[0]);
     })
     .thenExecuteAfter(10, () => {
-      var block = player.getBlockFromViewVector(blockVectorOptions);
+      var block = player.getBlockFromViewDirection(blockVectorOptions);
       const relativePos = test.relativeBlockLocation(block.location);
       test.assert(
         relativePos.equals(blocks[0]),
@@ -32,7 +25,7 @@ function lookAtThree(test, blocks, blockVectorOptions) {
       player.lookAtBlock(blocks[1]);
     })
     .thenExecuteAfter(10, () => {
-      var block = player.getBlockFromViewVector(blockVectorOptions);
+      var block = player.getBlockFromViewDirection(blockVectorOptions);
       const relativePos = test.relativeBlockLocation(block.location);
       test.assert(
         relativePos.equals(blocks[1]),
@@ -42,7 +35,7 @@ function lookAtThree(test, blocks, blockVectorOptions) {
       player.lookAtBlock(blocks[2]);
     })
     .thenExecuteAfter(10, () => {
-      var block = player.getBlockFromViewVector(blockVectorOptions);
+      var block = player.getBlockFromViewDirection(blockVectorOptions);
       const relativePos = test.relativeBlockLocation(block.location);
       test.assert(
         relativePos.equals(blocks[2]),

@@ -15,7 +15,7 @@ GameTest.register("ComponentTests", "color_component", (test) => {
     const color = colorComponent.value;
     if (++counter < 48) {
       colorComponent.value = (color + 1) % 16;
-      throw "Disco sheep!";
+      throw "";
     } else {
       colorComponent.value = 10;
       test.assert(colorComponent.value === 10, "Unexpected color value");

@@ -1077,7 +1077,7 @@ GameTest.registerAsync("SimulatedPlayerTests", "player_join_leave_events", async
 
   let expectedPlayerJoined = false;
   const playerJoinCallback = world.events.playerJoin.subscribe((e) => {
-    if (e.player.name == thePlayerName) {
+    if (e.playerName == thePlayerName) {
       expectedPlayerJoined = true;
     }
   });

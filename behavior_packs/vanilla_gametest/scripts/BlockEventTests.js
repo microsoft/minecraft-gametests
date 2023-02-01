@@ -26,9 +26,9 @@ function registerBlockBreakTest(gameMode, blockType, blockBreakTicks) {
     const listener = (event) => {
       // Make sure it's our block that broke
       const locationCorrect = event.block.location.equals(test.worldBlockLocation(blockLocation));
-      const blockTypeCorreect = event.brokenBlockPermutation.type.id == blockType.id;
+      const blockTypeCorrect = event.brokenBlockPermutation.type.id == blockType.id;
 
-      if (locationCorrect && blockTypeCorreect) {
+      if (locationCorrect && blockTypeCorrect) {
         blockDidBreak = true;
       }
     };

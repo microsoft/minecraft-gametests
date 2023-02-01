@@ -8,10 +8,7 @@ import {
   MinecraftBlockTypes,
   Color,
   Direction,
-  ExplosionOptions,
   EntityDamageCause,
-  EntityEventOptions,
-  EntityDataDrivenTriggerEventOptions,
   FluidContainer,
   FluidType,
   MinecraftEffectTypes,
@@ -23,7 +20,7 @@ import {
 } from "@minecraft/server";
 
 GameTest.register("APITests", "on_entity_created", (test) => {
-  const entityCreatedCallback = world.events.entityCreate.subscribe((entity) => {
+  const entitySpawnCallback = world.events.entitySpawn.subscribe((entity) => {
     if (entity) {
       test.succeed();
     } else {
@@ -31,7 +28,7 @@ GameTest.register("APITests", "on_entity_created", (test) => {
     }
   });
   test.spawn("minecraft:horse<minecraft:ageable_grow_up>", new BlockLocation(1, 2, 1));
-  world.events.entityCreate.unsubscribe(entityCreatedCallback);
+  world.events.entitySpawn.unsubscribe(entitySpawnCallback);
 })
   .structureName("ComponentTests:animal_pen")
   .tag(GameTest.Tags.suiteDefault);
@@ -400,8 +397,9 @@ GameTest.register("APITests", "add_effect_event", (test) => {
     }
   });
 
-  let specificEntityOptions = new EntityEventOptions();
-  specificEntityOptions.entities.push(villager);
+  let specificEntityOptions = {
+    entities: [villager],
+  };
 
   const effectEntityFilterAddCallback = world.events.effectAdd.subscribe((eventData) => {
     test.assert(eventData.entity.id === "minecraft:villager_v2", "Unexpected id");
@@ -411,8 +409,9 @@ GameTest.register("APITests", "add_effect_event", (test) => {
     if (filteredEntityEffectSucceed && basicEffectSucceed && filteredTypeEffectSucceed) test.succeed();
   }, specificEntityOptions);
 
-  let entityTypeOptions = new EntityEventOptions();
-  entityTypeOptions.entityTypes.push("minecraft:villager_v2");
+  let entityTypeOptions = {
+    entityTypes: ["minecraft:villager_v2"],
+  };
 
   const effectTypeFilterAddCallback = world.events.effectAdd.subscribe((eventData) => {
     test.assert(eventData.entity.id === "minecraft:villager_v2", "Unexpected id");
@@ -1328,7 +1327,7 @@ GameTest.register("APITests", "teleport_mob_facing", async (test) => {
   await test.idle(10);
   player.teleportFacing(teleportWorldLoc, player.dimension, facingWorldLoc);
   await test.idle(20);
-  facingBlock = player.getBlockFromViewVector();
+  facingBlock = player.getBlockFromViewDirection();
   test.assert(
     facingBlock.type === diamondBlock.type,
     "expected mob to face diamond block but instead got " + facingBlock.type.id
@@ -1350,37 +1349,49 @@ GameTest.register("APITests", "view_vector", (test) => {
     .startSequence()
     .thenExecuteAfter(10, () => {
       test.assert(
-        isNear(player.viewVector.x, -0.99, 0.01),
-        "Expected x component to be -0.99, but got " + player.viewVector.x
+        isNear(player.viewDirection.x, -0.99, 0.01),
+        "Expected x component to be -0.99, but got " + player.viewDirection.x
       );
       test.assert(
-        isNear(player.viewVector.y, -0.12, 0.01),
-        "Expected y component to be -0.12, but got " + player.viewVector.y
+        isNear(player.viewDirection.y, -0.12, 0.01),
+        "Expected y component to be -0.12, but got " + player.viewDirection.y
       );
-      test.assert(isNear(player.viewVector.z, 0, 0.01), "Expected z component to be 0, but got " + player.viewVector.z);
+      test.assert(
+        isNear(player.viewDirection.z, 0, 0.01),
+        "Expected z component to be 0, but got " + player.viewDirection.z
+      );
       test.assert(player.rotation.y == 90, "Expected body rotation to be 90, but got " + player.rotation.y);
       player.lookAtBlock(new BlockLocation(2, 3, 0));
     })
     .thenExecuteAfter(10, () => {
       test.assert(
-        isNear(player.viewVector.x, 0.7, 0.01),
-        "Expected x component to be .70, but got " + player.viewVector.x
+        isNear(player.viewDirection.x, 0.7, 0.01),
+        "Expected x component to be .70, but got " + player.viewDirection.x
       );
       test.assert(
-        isNear(player.viewVector.y, -0.08, 0.01),
-        "Expected y component to be -0.08, but got " + player.viewVector.y
+        isNear(player.viewDirection.y, -0.08, 0.01),
+        "Expected y component to be -0.08, but got " + player.viewDirection.y
       );
       test.assert(
-        isNear(player.viewVector.z, -0.7, 0.01),
-        "Expected z component to be -0.70, but got " + player.viewVector.z
+        isNear(player.viewDirection.z, -0.7, 0.01),
+        "Expected z component to be -0.70, but got " + player.viewDirection.z
       );
       test.assert(player.rotation.y == -135, "Expected body rotation to be -135, but got " + player.rotation.y);
       player.lookAtBlock(new BlockLocation(1, 5, 1));
     })
     .thenExecuteAfter(10, () => {
-      test.assert(isNear(player.viewVector.x, 0, 0.01), "Expected x component to be 0, but got " + player.viewVector.x);
-      test.assert(isNear(player.viewVector.y, 1, 0.01), "Expected y component to be 1, but got " + player.viewVector.y);
-      test.assert(isNear(player.viewVector.z, 0, 0.01), "Expected z component to be 0, but got " + player.viewVector.z);
+      test.assert(
+        isNear(player.viewDirection.x, 0, 0.01),
+        "Expected x component to be 0, but got " + player.viewDirection.x
+      );
+      test.assert(
+        isNear(player.viewDirection.y, 1, 0.01),
+        "Expected y component to be 1, but got " + player.viewDirection.y
+      );
+      test.assert(
+        isNear(player.viewDirection.z, 0, 0.01),
+        "Expected z component to be 0, but got " + player.viewDirection.z
+      );
       test.assert(player.rotation.y == -135, "Expected body rotation to be -135, but got " + player.rotation.y);
 
       const head = test.relativeLocation(player.headLocation);
@@ -1458,9 +1469,10 @@ GameTest.registerAsync("APITests", "data_driven_actor_event", async (test) => {
   });
 
   //Trigger filtered by entity type and event type
-  let entityEventFilterOptions = new EntityDataDrivenTriggerEventOptions();
-  entityEventFilterOptions.entityTypes.push("minecraft:llama");
-  entityEventFilterOptions.eventTypes.push("minecraft:entity_spawned");
+  let entityEventFilterOptions = {
+    entityTypes: ["minecraft:llama"],
+    eventTypes: ["minecraft:entity_spawned"],
+  };
 
   let entityEventBeforeFilterTrigger = world.events.beforeDataDrivenEntityTriggerEvent.subscribe((event) => {
     entityEventFilteredBeforeTriggerSuccess = true;
@@ -1677,8 +1689,8 @@ GameTest.registerAsync("APITests", "entity_hurt_event_skeleton_hurts_player", as
   let hurtCallback = world.events.entityHurt.subscribe((e) => {
     if (e.hurtEntity === player) {
       test.assert(
-        e.damagingEntity === skeleton,
-        "Expected damagingEntity to be skeleton but got " + e.damagingEntity.id
+        e.damageSource.damagingEntity === skeleton,
+        "Expected damagingEntity to be skeleton but got " + e.damageSource.damagingEntity.typeId
       );
       test.assert(e.cause === EntityDamageCause.projectile, "Expected cause to be entity_attack but got " + e.cause);
       test.assert(e.projectile.id === "minecraft:arrow", "Expected projectile to be arrow but got " + e.cause);
@@ -1700,8 +1712,8 @@ GameTest.registerAsync("APITests", "entity_hurt_event_skeleton_kills_player", as
   let hurtCallback = world.events.entityHurt.subscribe((e) => {
     if (e.hurtEntity === player) {
       test.assert(
-        e.damagingEntity === skeleton,
-        "Expected damagingEntity to be skeleton but got " + e.damagingEntity.id
+        e.damageSource.damagingEntity === skeleton,
+        "Expected damagingEntity to be skeleton but got " + e.damageSource.damagingEntity?.typeId
       );
       test.assert(e.cause === EntityDamageCause.projectile, "Expected cause to be entity_attack but got " + e.cause);
       test.assert(e.projectile.id === "minecraft:arrow", "Expected projectile to be arrow but got " + e.cause);

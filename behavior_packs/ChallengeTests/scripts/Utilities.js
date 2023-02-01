@@ -61,7 +61,7 @@ export class Utilities {
     }
 
     if (count > 0) {
-      throw Error("Entity of type '" + entityType + "' found (" + count + ")");
+      throw "Entity of type '" + entityType + "' found (" + count + ")";
     }
   }
 
@@ -81,7 +81,7 @@ export class Utilities {
     }
 
     if (count == 0) {
-      throw Error("Entity of type '" + entityType + "' was not found (" + count + ")");
+      throw "Entity of type '" + entityType + "' was not found (" + count + ")";
     }
   }
 }

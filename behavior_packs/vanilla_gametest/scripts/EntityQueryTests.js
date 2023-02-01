@@ -2,15 +2,7 @@
 
 import GameTestExtensions from "./GameTestExtensions.js";
 import * as GameTest from "@minecraft/server-gametest";
-import {
-  BlockAreaSize,
-  BlockLocation,
-  EntityQueryOptions,
-  EntityQueryScoreOptions,
-  GameMode,
-  Location,
-  world,
-} from "@minecraft/server";
+import { BlockAreaSize, BlockLocation, GameMode, Location, world } from "@minecraft/server";
 
 GameTest.register("EntityQueryTests", "world_player_query", (test) => {
   const player = test.spawnSimulatedPlayer(new BlockLocation(1, 2, 1), "world_player_1");
