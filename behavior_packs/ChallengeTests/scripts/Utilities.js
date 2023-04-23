@@ -4,43 +4,43 @@ import { BlockLocation } from "@minecraft/server";
 
 export class Utilities {
   static fillBlock(test, blockType, xFrom, yFrom, zFrom, xTo, yTo, zTo) {
-    for (let i = xFrom; i <= xTo; i++) {
-      for (let j = yFrom; j <= yTo; j++) {
-        for (let k = zFrom; k <= zTo; k++) {
-          test.setBlockType(blockType, new BlockLocation(i, j, k));
+    for (let xCoord = xFrom; xCoord <= xTo; xCoord++) {
+      for (let yCoord = yFrom; yCoord <= yTo; yCoord++) {
+        for (let zCoord = zFrom; zCoord <= zTo; zCoord++) {
+          test.setBlockType(blockType, new BlockLocation(xCoord, yCoord, zCoord));
         }
       }
     }
   }
 
   static addFourWalls(test, blockType, xFrom, yFrom, zFrom, xTo, yTo, zTo) {
-    for (let i = xFrom; i <= xTo; i++) {
-      for (let k = yFrom; k <= yTo; k++) {
-        test.setBlockType(blockType, new BlockLocation(i, k, zFrom));
-        test.setBlockType(blockType, new BlockLocation(i, k, zTo));
+    for (let xCoord = xFrom; xCoord <= xTo; xCoord++) {
+      for (let yCoord = yFrom; yCoord <= yTo; yCoord++) {
+        test.setBlockType(blockType, new BlockLocation(xCoord, yCoord, zFrom));
+        test.setBlockType(blockType, new BlockLocation(xCoord, yCoord, zTo));
       }
     }
 
-    for (let j = zFrom + 1; j < zTo; j++) {
-      for (let k = yFrom; k <= yTo; k++) {
-        test.setBlockType(blockType, new BlockLocation(xFrom, k, j));
-        test.setBlockType(blockType, new BlockLocation(xTo, k, j));
+    for (let zCoord = zFrom + 1; zCoord < zTo; zCoord++) {
+      for (let yCoord = yFrom; yCoord <= yTo; yCoord++) {
+        test.setBlockType(blockType, new BlockLocation(xFrom, yCoord, zCoord));
+        test.setBlockType(blockType, new BlockLocation(xTo, yCoord, zCoord));
       }
     }
   }
 
   static addFourNotchedWalls(test, blockType, xFrom, yFrom, zFrom, xTo, yTo, zTo) {
-    for (let i = xFrom + 1; i < xTo; i++) {
-      for (let k = yFrom; k <= yTo; k++) {
-        test.setBlockType(blockType, new BlockLocation(i, k, zFrom));
-        test.setBlockType(blockType, new BlockLocation(i, k, zTo));
+    for (let xCoord = xFrom + 1; xCoord < xTo; xCoord++) {
+      for (let yCoord = yFrom; yCoord <= yTo; yCoord++) {
+        test.setBlockType(blockType, new BlockLocation(xCoord, yCoord, zFrom));
+        test.setBlockType(blockType, new BlockLocation(xCoord, yCoord, zTo));
       }
     }
 
-    for (let j = zFrom + 1; j < zTo; j++) {
-      for (let k = yFrom; k <= yTo; k++) {
-        test.setBlockType(blockType, new BlockLocation(xFrom, k, j));
-        test.setBlockType(blockType, new BlockLocation(xTo, k, j));
+    for (let zCoord = zFrom + 1; zCoord < zTo; zCoord++) {
+      for (let yCoord = yFrom; yCoord <= yTo; yCoord++) {
+        test.setBlockType(blockType, new BlockLocation(xFrom, yCoord, zCoord));
+        test.setBlockType(blockType, new BlockLocation(xTo, yCoord, zCoord));
       }
     }
   }
@@ -48,31 +48,32 @@ export class Utilities {
   static assertEntityNotInSpecificArea(test, entityType, xFrom, yFrom, zFrom, xTo, yTo, zTo) {
     let count = 0;
 
-    for (let i = xFrom; i <= xTo; i++) {
-      for (let j = yFrom; j <= yTo; j++) {
-        for (let k = zFrom; k <= zTo; k++) {
+    for (let xCoord = xFrom; xCoord <= xTo; xCoord++) {
+      for (let yCoord = yFrom; yCoord <= yTo; yCoord++) {
+        for (let zCoord = zFrom; zCoord <= zTo; zCoord++) {
           try {
-            test.assertEntityPresent(entityType, new BlockLocation(i, j, k), false);
+            test.assertEntityPresent(entityType, new BlockLocation(xCoord, yCoord, zCoord), false);
           } catch (Exception) {
             count++;
+            i, j, k;
           }
         }
       }
     }
 
     if (count > 0) {
-      throw "Entity of type '" + entityType + "' found (" + count + ")";
+      throw Error("Entity of type '" + entityType + "' found (" + count + ")");
     }
   }
 
   static assertEntityInSpecificArea(test, entityType, xFrom, yFrom, zFrom, xTo, yTo, zTo) {
     let count = 0;
 
-    for (let i = xFrom; i <= xTo; i++) {
-      for (let j = yFrom; j <= yTo; j++) {
-        for (let k = zFrom; k <= zTo; k++) {
+    for (let xCoord = xFrom; xCoord <= xTo; xCoord++) {
+      for (let yCoord = yFrom; yCoord <= yTo; yCoord++) {
+        for (let zCoord = zFrom; zCoord <= zTo; zCoord++) {
           try {
-            test.assertEntityPresent(entityType, new BlockLocation(i, j, k), false);
+            test.assertEntityPresent(entityType, new BlockLocation(xCoord, yCoord, zCoord), false);
           } catch (Exception) {
             count++;
           }
@@ -81,7 +82,7 @@ export class Utilities {
     }
 
     if (count == 0) {
-      throw "Entity of type '" + entityType + "' was not found (" + count + ")";
+      throw Error("Entity of type '" + entityType + "' was not found (" + count + ")");
     }
   }
 }
